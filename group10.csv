@@ -1,0 +1,82 @@
+issue_id,when,action,what,user,milestone
+1,2017-01-23T19:04:43Z,labeled,Conversation,user1,
+3,2017-01-24T21:47:58Z,labeled,Meeting Notes,user1,
+10,2017-02-07T17:54:54Z,labeled,Conversation,user2,
+11,2017-02-07T17:25:37Z,labeled,Meeting Notes,user2,
+12,2017-02-07T17:52:20Z,labeled,core,user2,Finalize design for all approaches
+12,2017-02-07T17:57:11Z,labeled,hard,user2,Finalize design for all approaches
+13,2017-02-07T17:52:34Z,labeled,approach1,user2,Finalize design for all approaches
+13,2017-02-07T17:57:31Z,labeled,medium,user2,Finalize design for all approaches
+14,2017-02-07T17:53:09Z,labeled,approach2,user2,Finalize design for all approaches
+14,2017-02-07T17:57:45Z,labeled,medium,user2,Finalize design for all approaches
+15,2017-02-07T17:53:23Z,labeled,approach3,user2,Finalize design for all approaches
+15,2017-02-07T17:57:57Z,labeled,hard,user2,Finalize design for all approaches
+16,2017-02-07T18:00:34Z,labeled,medium,user2,Core implementation
+16,2017-02-07T18:00:34Z,labeled,core,user2,Core implementation
+18,2017-02-22T00:49:27Z,labeled,approach2,user1,Approach 2
+18,2017-02-22T00:49:27Z,labeled,enhancement,user1,Approach 2
+19,2017-02-22T00:51:47Z,labeled,enhancement,user1,Approach 2
+19,2017-02-22T00:51:47Z,labeled,approach2,user1,Approach 2
+20,2017-02-22T00:53:09Z,labeled,enhancement,user1,Approach 2
+20,2017-02-22T00:53:09Z,labeled,approach2,user1,Approach 2
+21,2017-02-22T00:54:02Z,labeled,approach2,user1,Approach 2
+21,2017-02-22T00:54:02Z,labeled,enhancement,user1,Approach 2
+22,2017-02-22T01:37:04Z,labeled,enhancement,user1,Approach 2
+22,2017-02-22T01:37:04Z,labeled,approach2,user1,Approach 2
+23,2017-02-22T01:37:28Z,labeled,approach2,user1,Approach 2
+23,2017-02-22T01:46:38Z,labeled,enhancement,user1,Approach 2
+24,2017-02-22T01:47:13Z,labeled,approach2,user1,Approach 2
+24,2017-02-22T01:47:13Z,labeled,enhancement,user1,Approach 2
+25,2017-02-22T01:47:43Z,labeled,enhancement,user1,Approach 2
+25,2017-02-22T01:47:43Z,labeled,approach2,user1,Approach 2
+26,2017-02-22T03:50:23Z,labeled,enhancement,user1,Approach 2
+26,2017-02-22T03:50:23Z,labeled,approach2,user1,Approach 2
+27,2017-02-22T03:51:34Z,labeled,approach2,user1,Approach 2
+27,2017-02-22T03:51:34Z,labeled,bug,user1,Approach 2
+28,2017-02-22T03:52:21Z,labeled,bug,user1,Approach 2
+28,2017-02-22T03:52:21Z,labeled,approach2,user1,Approach 2
+29,2017-02-22T14:04:00Z,labeled,bug,user1,Approach 2
+29,2017-02-22T14:04:00Z,labeled,approach2,user1,Approach 2
+30,2017-02-22T20:02:55Z,labeled,approach1,user2,Coding and implementation
+30,2017-02-22T20:04:57Z,labeled,bug,user2,Coding and implementation
+31,2017-02-22T20:04:32Z,labeled,bug,user2,Coding and implementation
+31,2017-02-22T20:04:47Z,labeled,approach1,user2,Coding and implementation
+32,2017-02-22T20:05:45Z,labeled,bug,user2,Coding and implementation
+32,2017-02-22T20:05:45Z,labeled,approach1,user2,Coding and implementation
+33,2017-02-23T01:32:40Z,labeled,approach2,user1,Approach 2
+33,2017-02-23T01:32:40Z,labeled,enhancement,user1,Approach 2
+33,2017-03-30T20:49:09Z,labeled,wontfix,user2,Approach 2
+34,2017-02-23T01:36:11Z,labeled,bug,user1,Approach 2
+34,2017-02-23T01:36:11Z,labeled,approach2,user1,Approach 2
+35,2017-02-23T03:23:03Z,labeled,core,user3,
+35,2017-02-23T03:23:03Z,labeled,approach3,user3,
+35,2017-02-23T03:23:03Z,labeled,medium,user3,
+35,2017-02-23T03:34:53Z,unlabeled,core,user3,
+36,2017-02-23T03:34:23Z,labeled,medium,user3,
+36,2017-02-23T03:34:23Z,labeled,approach3,user3,
+36,2017-02-23T03:34:23Z,labeled,core,user3,
+36,2017-02-23T03:35:06Z,unlabeled,core,user3,
+37,2017-02-23T16:05:35Z,labeled,approach1,user2,Coding and implementation
+37,2017-02-23T16:05:35Z,labeled,Conversation,user2,Coding and implementation
+38,2017-02-23T21:54:05Z,labeled,approach2,user1,Approach 2
+38,2017-02-23T21:54:05Z,labeled,approach3,user1,Approach 2
+38,2017-02-23T21:54:05Z,labeled,approach1,user1,Approach 2
+39,2017-02-23T21:59:17Z,labeled,approach1,user1,Approach 2
+39,2017-02-23T21:59:17Z,labeled,approach3,user1,Approach 2
+39,2017-02-23T21:59:17Z,labeled,approach2,user1,Approach 2
+40,2017-02-25T06:55:35Z,labeled,approach3,user3,
+41,2017-02-28T20:04:02Z,labeled,bug,user1,Approach 2
+41,2017-02-28T20:04:02Z,labeled,approach2,user1,Approach 2
+41,2017-03-13T23:35:59Z,unlabeled,bug,user2,Approach 2
+41,2017-03-13T23:35:59Z,labeled,enhancement,user2,Approach 2
+41,2017-03-30T20:42:15Z,labeled,wontfix,user2,Approach 2
+42,2017-02-28T20:09:07Z,labeled,bug,user1,Approach 2
+42,2017-02-28T20:09:07Z,labeled,approach2,user1,Approach 2
+44,2017-03-16T20:39:59Z,labeled,approach3,user1,March Milestone (Due April 7)
+44,2017-03-16T20:39:59Z,labeled,approach2,user1,March Milestone (Due April 7)
+44,2017-03-16T20:39:59Z,labeled,approach1,user1,March Milestone (Due April 7)
+45,2017-03-16T20:40:21Z,labeled,approach3,user1,March Milestone (Due April 7)
+45,2017-03-16T20:40:21Z,labeled,approach2,user1,March Milestone (Due April 7)
+45,2017-03-16T20:40:21Z,labeled,approach1,user1,March Milestone (Due April 7)
+46,2017-03-20T15:10:31Z,labeled,Conversation,user3,March Milestone (Due April 7)
+47,2017-03-30T21:22:52Z,labeled,Conversation,user1,March Milestone (Due April 7)

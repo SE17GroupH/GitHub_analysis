@@ -1,0 +1,93 @@
+issue_id,when,action,what,user,milestone
+1,2017-02-08T16:38:07Z,labeled,help wanted,user1,Code base setup
+1,2017-02-08T16:40:18Z,labeled,UI,user1,Code base setup
+2,2017-02-08T16:38:28Z,labeled,MagicLink,user1,Magic link setup complete
+3,2017-02-08T16:38:46Z,labeled,Fingerprint,user1,Fingerprint authentication complete
+4,2017-02-08T16:39:00Z,labeled,Fingerprint,user1,Testing and debugging
+5,2017-02-08T16:39:11Z,labeled,MagicLink,user1,Testing and debugging
+6,2017-02-08T16:39:32Z,labeled,VoiceDNA,user1,Testing and debugging
+7,2017-02-08T16:40:26Z,labeled,UI,user1,Setup UI for the app
+8,2017-02-08T16:46:45Z,labeled,MagicLink,user1,Magic link setup complete
+9,2017-02-08T16:48:30Z,labeled,Fingerprint,user1,Testing and debugging
+9,2017-02-08T16:48:35Z,labeled,enhancement,user1,Testing and debugging
+9,2017-02-17T04:41:05Z,labeled,lowpriority,user2,Testing and debugging
+10,2017-02-08T16:49:03Z,labeled,MagicLink,user1,Testing and debugging
+10,2017-02-08T16:49:03Z,labeled,enhancement,user1,Testing and debugging
+10,2017-02-17T04:40:54Z,labeled,lowpriority,user2,Testing and debugging
+11,2017-02-08T16:49:36Z,labeled,enhancement,user1,Testing and debugging
+11,2017-02-08T16:49:36Z,labeled,VoiceDNA,user1,Testing and debugging
+11,2017-02-17T04:40:43Z,labeled,lowpriority,user2,Testing and debugging
+12,2017-02-09T03:22:02Z,labeled,enhancement,user1,Code base setup
+14,2017-02-09T01:44:35Z,labeled,UI,user1,Code base setup
+14,2017-02-09T01:51:14Z,labeled,urgent,user1,Code base setup
+15,2017-02-09T02:38:13Z,labeled,enhancement,user3,Setup UI for the app
+15,2017-02-09T02:38:42Z,labeled,UI,user1,Setup UI for the app
+16,2017-02-09T02:38:07Z,labeled,UI,user1,Setup UI for the app
+17,2017-02-09T02:40:57Z,labeled,Fingerprint,user1,Fingerprint authentication complete
+18,2017-02-09T03:19:50Z,labeled,VoiceDNA,user1,Fingerprint authentication complete
+18,2017-02-09T03:19:50Z,labeled,urgent,user1,Fingerprint authentication complete
+18,2017-02-09T03:19:50Z,labeled,MagicLink,user1,Fingerprint authentication complete
+18,2017-02-09T03:19:50Z,labeled,Fingerprint,user1,Fingerprint authentication complete
+21,2017-02-09T18:29:53Z,labeled,urgent,user3,
+23,2017-02-09T21:04:42Z,labeled,VoiceDNA,user3,Voice recognition setup complete
+24,2017-02-14T14:11:46Z,labeled,question,user1,Testing and debugging
+26,2017-02-14T21:50:55Z,labeled,bug,user2,Testing and debugging
+27,2017-02-16T15:57:31Z,labeled,urgent,user2,Magic link setup complete
+27,2017-02-16T15:57:31Z,labeled,question,user2,Magic link setup complete
+28,2017-04-19T02:38:54Z,labeled,requirement,user1,Fingerprint authentication complete
+29,2017-04-19T02:38:48Z,labeled,requirement,user1,Magic link setup complete
+30,2017-04-19T02:38:41Z,labeled,requirement,user1,
+31,2017-04-19T02:38:34Z,labeled,requirement,user1,Fingerprint authentication complete
+33,2017-02-17T04:35:35Z,labeled,urgent,user2,Fingerprint authentication complete
+34,2017-02-17T04:36:55Z,labeled,urgent,user2,Fingerprint authentication complete
+34,2017-02-17T04:39:28Z,labeled,UI,user2,Fingerprint authentication complete
+35,2017-02-17T04:35:14Z,labeled,urgent,user2,Magic link setup complete
+36,2017-02-17T04:34:27Z,labeled,urgent,user2,Magic link setup complete
+37,2017-02-17T04:33:24Z,labeled,UI,user2,Testing and debugging
+37,2017-02-17T04:33:24Z,labeled,lowpriority,user2,Testing and debugging
+37,2017-02-17T04:33:24Z,labeled,enhancement,user2,Testing and debugging
+38,2017-02-17T04:30:17Z,labeled,lowpriority,user2,Testing and debugging
+38,2017-02-17T04:30:17Z,labeled,enhancement,user2,Testing and debugging
+44,2017-02-18T15:36:46Z,labeled,bug,user2,v3
+44,2017-02-18T15:36:46Z,labeled,mediumpriority,user2,v3
+45,2017-02-18T15:39:32Z,labeled,VoiceDNA,user2,Voice recognition setup complete
+45,2017-02-18T15:39:55Z,labeled,urgent,user2,Voice recognition setup complete
+46,2017-02-18T19:23:39Z,labeled,enhancement,user2,Voice recognition setup complete
+46,2017-02-18T19:23:39Z,labeled,question,user2,Voice recognition setup complete
+46,2017-02-18T19:23:39Z,labeled,lowpriority,user2,Voice recognition setup complete
+47,2017-02-18T19:28:37Z,labeled,UI,user2,Testing and debugging
+47,2017-02-18T19:28:37Z,labeled,bug,user2,Testing and debugging
+47,2017-02-18T19:28:37Z,labeled,mediumpriority,user2,Testing and debugging
+48,2017-02-18T21:57:31Z,labeled,enhancement,user2,Testing and debugging
+48,2017-02-18T21:57:31Z,labeled,lowpriority,user2,Testing and debugging
+50,2017-02-20T07:19:22Z,labeled,bug,user2,v3
+50,2017-02-20T07:19:22Z,labeled,mediumpriority,user2,v3
+50,2017-02-23T18:37:49Z,labeled,lowpriority,user3,v3
+50,2017-02-23T18:38:05Z,unlabeled,mediumpriority,user3,v3
+50,2017-03-08T19:51:02Z,labeled,mediumpriority,user2,v3
+50,2017-03-08T19:51:02Z,unlabeled,lowpriority,user2,v3
+59,2017-02-23T21:35:49Z,labeled,urgent,user2,Demo day
+59,2017-02-23T21:35:49Z,labeled,bug,user2,Demo day
+60,2017-02-23T21:37:39Z,labeled,bug,user2,v3
+60,2017-02-23T21:37:39Z,labeled,VoiceDNA,user2,v3
+60,2017-02-23T21:37:39Z,labeled,mediumpriority,user2,v3
+61,2017-03-04T16:50:17Z,labeled,urgent,user2,
+62,2017-04-19T02:38:21Z,labeled,requirement,user1,
+63,2017-04-19T02:37:44Z,labeled,feedback,user1,
+64,2017-03-04T16:49:42Z,labeled,lowpriority,user2,
+64,2017-03-04T16:49:42Z,labeled,enhancement,user2,
+65,2017-03-04T19:43:35Z,labeled,mediumpriority,user2,
+65,2017-03-04T19:43:35Z,labeled,enhancement,user2,
+69,2017-03-05T20:18:42Z,labeled,mediumpriority,user2,
+71,2017-03-05T20:27:39Z,labeled,enhancement,user2,
+71,2017-03-05T20:27:39Z,labeled,lowpriority,user2,
+79,2017-03-08T03:58:29Z,labeled,enhancement,user2,
+79,2017-03-08T03:58:29Z,labeled,mediumpriority,user2,
+82,2017-03-08T23:29:49Z,labeled,UI,user2,v3
+82,2017-03-08T23:29:49Z,labeled,urgent,user2,v3
+83,2017-03-08T23:32:58Z,labeled,urgent,user2,v3
+83,2017-03-08T23:32:58Z,labeled,bug,user2,v3
+84,2017-03-09T00:27:45Z,labeled,mediumpriority,user2,v3
+85,2017-03-09T03:22:10Z,labeled,bug,user2,v3
+87,2017-03-20T18:08:55Z,labeled,question,user1,v4
+87,2017-03-20T18:08:55Z,labeled,mediumpriority,user1,v4
