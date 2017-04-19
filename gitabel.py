@@ -47,15 +47,18 @@ def secs(d0):
  
 def dump1(u,issues, mapping):
 	"""
-	requires github access token as environment variable named GITHUB_TOKEN
+	requires github access token
 	returns dictionary of labeled issues with its list of events.
 	"""
-	try:  
-		token = os.environ['GITHUB_TOKEN']
-	except KeyError: 
-		print("Please set the environment variable GITHUB_TOKEN")
-		print("In bash: GITHUB_TOKEN=<your_token>;export GITHUB_TOKEN")
-		sys.exit(1)
+	token = "<your_token>" #can set token here
+	
+	if token == "<your_token>":
+		try:  
+			token = os.environ['GITHUB_TOKEN']
+		except KeyError: 
+			print("Please set the environment variable GITHUB_TOKEN")
+			print("In bash: GITHUB_TOKEN=<your_token>;export GITHUB_TOKEN")
+			sys.exit(1)
 	
 	request = urllib.request.Request(u, headers={"Authorization" : "token "+token})
 	v = urllib.request.urlopen(request).read()
