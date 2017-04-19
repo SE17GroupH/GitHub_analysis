@@ -1,11 +1,4 @@
-#  gitabel Python3 version
-#  the world's smallest project management tool
-#  reports relabelling times in github (time in seconds since epoch)
-#  thanks to dr parnin
-#  todo:
-#    - ensure events sorted by time
-#    - add issue id
-#    - add person handle
+#  gitabel Python3 version by TeamH
 
 """
 You will need to add your authorization token in the code.
