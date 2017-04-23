@@ -6,3 +6,4 @@ Commit size; commit time; commit related to which issue(can be analysis manually
 
 Issues realted to milestone; Issues overdue;
 
+Comments on issues
