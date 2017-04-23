@@ -11,5 +11,5 @@ Comments on issues
 
 How to analysis
 
-Analysis by seperate teams, but using a linear model generated using all the data
+Analysis by seperate teams, but using a linear model generated using all the data (using Z score)
 
