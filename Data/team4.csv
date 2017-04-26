@@ -1,0 +1,112 @@
+issue_id,action_time,action,what,user,milestone,when
+1,1/26/17,closed,no label,user0,,1485467916
+2,2/7/17,closed,no label,user0,,1486426124
+2,1/20/17,reopened,no label,user1,,1484878010
+2,1/20/17,closed,no label,user1,,1484877984
+3,2/7/17,closed,no label,user0,,1486426174
+4,2/7/17,closed,no label,user0,,1486426266
+5,2/9/17,subscribed,no label,user1,,1486658701
+5,2/9/17,mentioned,no label,user1,,1486658701
+5,2/2/17,assigned,no label,user4,,1485998309
+6,2/23/17,closed,no label,user3,Learn Android,1487889515
+6,2/7/17,added_to_project,no label,user3,Learn Android,1486505621
+6,2/7/17,demilestoned,no label,user0,Learn Android,1486426671
+6,2/7/17,milestoned,no label,user0,Learn Android,1486426671
+6,2/7/17,demilestoned,no label,user0,Learn Android,1486426623
+6,2/7/17,milestoned,no label,user0,Learn Android,1486426623
+6,2/7/17,demilestoned,no label,user0,Learn Android,1486426371
+6,2/7/17,milestoned,no label,user0,Learn Android,1486426371
+6,2/6/17,demilestoned,no label,user3,Learn Android,1486346564
+6,2/6/17,milestoned,no label,user3,Learn Android,1486346564
+6,2/6/17,labeled,help wanted,user3,Learn Android,1486346239
+6,2/6/17,labeled,enhancement,user3,Learn Android,1486346239
+6,2/6/17,demilestoned,no label,user3,Learn Android,1486346163
+6,2/6/17,milestoned,no label,user3,Learn Android,1486346163
+6,2/6/17,demilestoned,no label,user3,Learn Android,1486346129
+6,2/6/17,milestoned,no label,user3,Learn Android,1486346129
+6,2/6/17,milestoned,no label,user3,Learn Android,1486346111
+6,2/6/17,assigned,no label,user1,Learn Android,1486345981
+6,2/6/17,assigned,no label,user0,Learn Android,1486345981
+6,2/6/17,assigned,no label,user3,Learn Android,1486345965
+7,2/23/17,closed,no label,user3,,1487889515
+7,2/7/17,unassigned,no label,user3,,1486505813
+7,2/7/17,added_to_project,no label,user3,,1486505617
+7,2/7/17,assigned,no label,user3,,1486505056
+7,2/7/17,assigned,no label,user1,,1486505056
+7,2/7/17,assigned,no label,user0,,1486505056
+7,2/7/17,labeled,help wanted,user3,,1486505056
+8,2/23/17,closed,no label,user3,,1487889515
+8,2/7/17,unassigned,no label,user3,,1486505862
+8,2/7/17,unassigned,no label,user1,,1486505799
+8,2/7/17,unassigned,no label,user0,,1486505799
+8,2/7/17,added_to_project,no label,user3,,1486505610
+8,2/7/17,assigned,no label,user3,,1486505394
+8,2/7/17,assigned,no label,user1,,1486505394
+8,2/7/17,assigned,no label,user0,,1486505394
+8,2/7/17,unassigned,no label,user3,,1486505352
+8,2/7/17,unassigned,no label,user1,,1486505338
+8,2/7/17,unassigned,no label,user0,,1486505338
+8,2/7/17,assigned,no label,user3,,1486505190
+8,2/7/17,assigned,no label,user1,,1486505190
+8,2/7/17,assigned,no label,user0,,1486505190
+8,2/7/17,unlabeled,enhancement,user3,,1486505184
+8,2/7/17,labeled,help wanted,user3,,1486505174
+8,2/7/17,labeled,enhancement,user3,,1486505174
+9,2/19/17,closed,no label,user0,Facial/voice Recognition API,1487464951
+9,2/16/17,assigned,no label,user0,Facial/voice Recognition API,1487274790
+9,2/15/17,milestoned,no label,user0,Facial/voice Recognition API,1487129202
+10,2/19/17,closed,no label,user0,Design,1487467019
+10,2/16/17,assigned,no label,user0,Design,1487274747
+10,2/16/17,milestoned,no label,user0,Design,1487274739
+11,2/19/17,closed,no label,user0,Implementation - Facial recognition,1487467304
+11,2/16/17,assigned,no label,user0,Implementation - Facial recognition,1487275233
+11,2/16/17,milestoned,no label,user0,Implementation - Facial recognition,1487275233
+12,2/19/17,closed,no label,user0,Learn Android,1487465192
+12,2/19/17,assigned,no label,user0,Learn Android,1487465010
+12,2/19/17,milestoned,no label,user0,Learn Android,1487465010
+13,2/19/17,closed,no label,user0,Design,1487465562
+13,2/19/17,milestoned,no label,user0,Design,1487465520
+14,2/19/17,assigned,no label,user0,Design,1487466978
+14,2/19/17,milestoned,no label,user0,Design,1487466978
+15,2/19/17,closed,no label,user0,Implementation - Facial recognition,1487467453
+15,2/19/17,milestoned,no label,user0,Implementation - Facial recognition,1487467119
+16,2/22/17,closed,no label,user0,Implementation - Facial recognition,1487731667
+16,2/19/17,milestoned,no label,user0,Implementation - Facial recognition,1487467272
+17,3/8/17,closed,no label,user0,Implementation - Facial recognition,1488943359
+17,2/22/17,milestoned,no label,user0,Implementation - Facial recognition,1487731582
+18,3/1/17,closed,no label,user1,Design,1488330154
+18,2/27/17,milestoned,no label,user1,Design,1488202907
+18,2/23/17,assigned,no label,user1,Design,1487843399
+18,2/23/17,renamed,no label,user1,Design,1487843396
+19,2/23/17,assigned,no label,user1,,1487843371
+20,2/23/17,assigned,no label,user3,,1487889139
+21,2/28/17,milestoned,no label,user1,Design,1488253451
+21,2/27/17,mentioned,no label,user2,Design,1488170465
+21,2/27/17,assigned,no label,user1,Design,1488162388
+21,2/27/17,labeled,enhancement,user3,Design,1488154573
+21,2/27/17,assigned,no label,user3,Design,1488154561
+22,3/1/17,closed,no label,user1,Design,1488330028
+22,2/27/17,assigned,no label,user3,Design,1488161186
+22,2/27/17,assigned,no label,user1,Design,1488161186
+22,2/27/17,assigned,no label,user0,Design,1488161186
+22,2/27/17,milestoned,no label,user1,Design,1488161186
+23,2/28/17,closed,no label,user1,Design,1488253391
+23,2/27/17,milestoned,no label,user1,Design,1488161337
+23,2/27/17,assigned,no label,user3,Design,1488161327
+23,2/27/17,assigned,no label,user1,Design,1488161327
+23,2/27/17,assigned,no label,user0,Design,1488161327
+24,2/27/17,assigned,no label,user1,,1488161479
+25,3/1/17,closed,no label,user1,Design,1488329989
+25,2/27/17,assigned,no label,user3,Design,1488162282
+25,2/27/17,assigned,no label,user1,Design,1488162282
+25,2/27/17,assigned,no label,user0,Design,1488162282
+25,2/27/17,milestoned,no label,user1,Design,1488162012
+26,3/1/17,closed,no label,user1,Implementation,1488329905
+26,2/27/17,assigned,no label,user3,Implementation,1488163000
+26,2/27/17,assigned,no label,user1,Implementation,1488163000
+26,2/27/17,assigned,no label,user0,Implementation,1488163000
+26,2/27/17,milestoned,no label,user1,Implementation,1488163000
+28,3/8/17,closed,no label,user0,Implementation - Facial recognition,1488943077
+28,3/8/17,milestoned,no label,user0,Implementation - Facial recognition,1488942974
+29,3/8/17,milestoned,no label,user0,Implementation - Facial recognition,1488943355
+30,3/8/17,milestoned,no label,user0,Implementation - Facial recognition,1488943461

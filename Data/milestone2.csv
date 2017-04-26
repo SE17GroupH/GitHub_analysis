@@ -1,0 +1,9 @@
+milestone_id,milestone_title,created_at,due_at,closed_at,state,open_issues,closed_issues
+2281094,January Deadline,2017-01-26T22:00:06Z,2017-01-31T08:00:00Z,2017-02-07T00:43:38Z,closed,0,5
+2281097,March Milestone (Due April 7),2017-01-26T22:00:41Z,2017-04-07T07:00:00Z,,open,0,4
+2306422,Finalize design for all approaches,2017-02-07T17:47:41Z,2017-02-11T08:00:00Z,2017-02-22T00:48:07Z,closed,0,4
+2306423,Coding and implementation,2017-02-07T17:48:32Z,2017-02-23T08:00:00Z,2017-03-30T21:25:15Z,closed,0,4
+2306424,Testing,2017-02-07T17:48:55Z,2017-02-27T08:00:00Z,2017-03-30T21:25:34Z,closed,0,0
+2306466,Core implementation,2017-02-07T18:01:54Z,2017-02-23T08:00:00Z,2017-02-23T01:38:11Z,closed,0,1
+2339339,Approach 2,2017-02-2017-03-14T07:00:00Z,,2017-03-30T21:25:12Z,closed,0,18
+2356328,"mits from on eperson, ever, on this roject",2017-03-01T15:13:22Z,,2017-03-30T21:25:27Z,closed,0,0

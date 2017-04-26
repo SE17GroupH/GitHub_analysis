@@ -1,0 +1,283 @@
+install.packages("ggvis")
+library("ggvis")
+search()
+X <- matrix(c(1,2,3,4), nrow =4, ncol =1)#
+Y <- matrix(c(9,6,4,1), nrow =4, ncol =1)#
+calCovariance <- function(x, y){#
+		matrix11 <- sum((x - mean(x)) * (x - mean(x)))/(length(x)-1)#
+		matrix12 <- sum((x - mean(x)) * (y - mean(y)))/(length(x)-1)#
+		matrix21 <- sum((y - mean(y)) * (x - mean(x)))/(length(x)-1)#
+		matrix22 <- sum((y - mean(y)) * (x - mean(x)))/(length(x)-1)#
+		return (matrix(c(matrix11, matrix12, matrix21, matrix22), nrow =2, ncol =2))}#
+cov(cbind(X,Y))#
+calCovariance(X,Y)=cov(cbind(X,Y))
+X <- matrix(c(1,2,3,4), nrow =4, ncol =1)#
+Y <- matrix(c(9,6,4,1), nrow =4, ncol =1)#
+calCovariance <- function(x, y){#
+		matrix11 <- sum((x - mean(x)) * (x - mean(x)))/(length(x)-1)#
+		matrix12 <- sum((x - mean(x)) * (y - mean(y)))/(length(x)-1)#
+		matrix21 <- sum((y - mean(y)) * (x - mean(x)))/(length(x)-1)#
+		matrix22 <- sum((y - mean(y)) * (x - mean(x)))/(length(x)-1)#
+		return (matrix(c(matrix11, matrix12, matrix21, matrix22), nrow =2, ncol =2))}#
+cov(cbind(X,Y))#
+calCovariance(X,Y)
+calCovariance(X,Y)=cov(cbind(X,Y))
+clear
+X <- matrix(c(1,2,3,4), nrow =4, ncol =1)#
+Y <- matrix(c(9,6,4,1), nrow =4, ncol =1)#
+calCovariance <- function(x, y){#
+		matrix11 <- sum((x - mean(x)) * (x - mean(x)))/(length(x)-1)#
+		matrix12 <- sum((x - mean(x)) * (y - mean(y)))/(length(x)-1)#
+		matrix21 <- sum((y - mean(y)) * (x - mean(x)))/(length(x)-1)#
+		matrix22 <- sum((y - mean(y)) * (x - mean(x)))/(length(x)-1)#
+		return (matrix(c(matrix11, matrix12, matrix21, matrix22), nrow =2, ncol =2))}#
+cov(cbind(X,Y))#
+calCovariance(X,Y)==cov(cbind(X,Y))
+X <- matrix(c(1,2,3,4), nrow =4, ncol =1)#
+Y <- matrix(c(9,6,4,1), nrow =4, ncol =1)#
+calCovariance <- function(x, y){#
+		matrix11 <- sum((x - mean(x)) * (x - mean(x)))/(length(x)-1)#
+		matrix12 <- sum((x - mean(x)) * (y - mean(y)))/(length(x)-1)#
+		matrix21 <- sum((y - mean(y)) * (x - mean(x)))/(length(x)-1)#
+		matrix22 <- sum((y - mean(y)) * (y - mean(y)))/(length(y)-1)#
+		return (matrix(c(matrix11, matrix12, matrix21, matrix22), nrow =2, ncol =2))}#
+cov(cbind(X,Y))#
+calCovariance(X,Y)==cov(cbind(X,Y))
+mean((X^2)) == ((mean(X))^2 + (sd(X))^2)
+message("Verifying equation")#
+sigmaSquare = sum((X-mean(X))*(X-mean(X)))/4#
+if(mean(X^2) == mean(X)^2+ sigmaSquare)#
+    cat("Equation verified!")
+message(”Verifying equation”)#
+sigmaSquare = sum((X−mean(X))*(X−mean(X)))/4 if(mean(Xˆ2) == mean(X)ˆ2+ sigmaSquare)#
+cat(”Equation verified !”)
+message(”Verifying equation”)#
+sigmaSquare = sum((X-mean(X))*(X-mean(X)))/4#
+if(mean(X^2) == mean(X)^2+ sigmaSquare)#
+cat("Equation verified!")
+message("Verifying equation")#
+sigmaSquare = sum((X-mean(X))*(X-mean(X)))/4#
+if(mean(X^2) == mean(X)^2+ sigmaSquare)#
+cat("Equation verified!")
+ls()
+ls()
+data<-read.csv('group1_commit_data.csv')
+commit<-data$commits
+commit
+scale(commit, center = TRUE, scale = FALSE)
+commit - mean(commit)
+scale(commit, center = TRUE, scale = TRUE)
+zscore<-(commit-mean(commit)/sd(commit))
+zscore
+plot(zscore, type="o", col="blue")
+plot(zscore, type="o", col="blue", xlim = c(1,16))
+week<-data$week
+plot(week,zscore)
+plot(week,zscore, type="o", col="blue")
+axis(side=1, at=c(1:16))
+norm_commit<-rnorm(commit, mean =0, sd=1)
+zscore<-(norm_commit-mean(norm_commit)/sd(norm_commit))
+zscore
+plot(week,zscore, type="o", col="blue")
+abline(h=0)
+abline(h=0, lty=2, col="red")
+axis(side=1, at=c(1:16))
+data<-read.csv('group2_commit_data.csv')
+commit<-data$commits
+norm_commit-rnorm(commit, mean =0, sd=1)
+norm_commit<-rnorm(commit, mean =0, sd=1)
+scale(commit, center = TRUE, scale = TRUE)
+zscore<-(commit-mean(commit)/sd(commit))#
+zscore_norm<-(norm_commit-mean(norm_commit)/sd(norm_commit))
+plot(week,zscore, type="o", col="blue")#
+plot(week, zscore_norm, type="o", col="blue")#
+axis(side=1, at=c(1:16))
+plot(week,zscore, type="o", col="blue")
+axis(side=1, at=c(1:16))
+data<-read.csv('group3_commit_data.csv')
+commit<-data$commits#
+norm_commit<-rnorm(commit, mean =0, sd=1)#
+scale(commit, center = TRUE, scale = TRUE)#
+zscore<-(commit-mean(commit)/sd(commit))#
+zscore_norm<-(norm_commit-mean(norm_commit)/sd(norm_commit))#
+plot(week,zscore, type="o", col="blue")#
+plot(week, zscore_norm, type="o", col="blue")#
+axis(side=1, at=c(1:16))
+plot(week,zscore, type="o", col="blue")
+axis(side=1, at=c(1:16))
+data<-read.csv('group4_commit_data.csv')
+commit<-data$commits#
+norm_commit<-rnorm(commit, mean =0, sd=1)#
+scale(commit, center = TRUE, scale = TRUE)#
+zscore<-(commit-mean(commit)/sd(commit))#
+zscore_norm<-(norm_commit-mean(norm_commit)/sd(norm_commit))#
+plot(week, zscore_norm, type="o", col="blue")#
+axis(side=1, at=c(1:16))
+plot(week,zscore, type="o", col="blue")#
+axis(side=1, at=c(1:16))
+data<-read.csv('group5_commit_data.csv')
+commit<-data$commits#
+norm_commit<-rnorm(commit, mean =0, sd=1)#
+scale(commit, center = TRUE, scale = TRUE)#
+zscore<-(commit-mean(commit)/sd(commit))#
+zscore_norm<-(norm_commit-mean(norm_commit)/sd(norm_commit))#
+plot(week, zscore_norm, type="o", col="blue")#
+axis(side=1, at=c(1:16))
+plot(week,zscore, type="o", col="blue")#
+axis(side=1, at=c(1:16))
+data<-read.csv('group6_commit_data.csv')
+commit<-data$commits#
+norm_commit<-rnorm(commit, mean =0, sd=1)#
+scale(commit, center = TRUE, scale = TRUE)#
+zscore<-(commit-mean(commit)/sd(commit))#
+zscore_norm<-(norm_commit-mean(norm_commit)/sd(norm_commit))#
+plot(week, zscore_norm, type="o", col="blue")#
+axis(side=1, at=c(1:16))
+plot(week,zscore, type="o", col="blue")#
+axis(side=1, at=c(1:16))
+data<-read.csv('group7_commit_data.csv')
+data<-read.csv('group8_commit_data.csv')
+commit<-data$commits#
+norm_commit<-rnorm(commit, mean =0, sd=1)#
+scale(commit, center = TRUE, scale = TRUE)#
+zscore<-(commit-mean(commit)/sd(commit))#
+zscore_norm<-(norm_commit-mean(norm_commit)/sd(norm_commit))#
+plot(week, zscore_norm, type="o", col="blue")#
+axis(side=1, at=c(1:16))
+plot(week,zscore, type="o", col="blue")#
+axis(side=1, at=c(1:16))
+data<-read.csv('group9_commit_data.csv')
+commit<-data$commits#
+norm_commit<-rnorm(commit, mean =0, sd=1)#
+scale(commit, center = TRUE, scale = TRUE)#
+zscore<-(commit-mean(commit)/sd(commit))#
+zscore_norm<-(norm_commit-mean(norm_commit)/sd(norm_commit))#
+plot(week, zscore_norm, type="o", col="blue")#
+axis(side=1, at=c(1:16))
+plot(week,zscore, type="o", col="blue")#
+axis(side=1, at=c(1:16))
+data<-read.csv('group10_commit_data.csv')
+commit<-data$commits#
+norm_commit<-rnorm(commit, mean =0, sd=1)#
+scale(commit, center = TRUE, scale = TRUE)#
+zscore<-(commit-mean(commit)/sd(commit))#
+zscore_norm<-(norm_commit-mean(norm_commit)/sd(norm_commit))#
+plot(week, zscore_norm, type="o", col="blue")#
+axis(side=1, at=c(1:16))
+plot(week,zscore, type="o", col="blue")#
+axis(side=1, at=c(1:16))
+data<-read.csv('group11_commit_data.csv')
+zscore
+require(graphics)
+data<-read.csv('commits_combined.csv')
+week<-data$week
+week
+commits<-data$commit
+commits
+testlm<-lm(commits ~ week)
+plot(testlm, las =1)
+plot(testlm)
+plot(testlm)
+lm(formula = commits ~ week, data)
+testlm<-lm(formula = commits ~ week, data)
+plot(testlm)
+abline(testlm)
+plot.new
+abline(testlm)
+plot.new
+abline(testlm)
+plot(week, commit, col="blue", main="Commits Per Week", xlab="Week", ylab="Commits")
+week
+commits
+week.length
+week.size
+?
+weel
+week
+length(week)
+length(commits)
+plot(week, commit)
+install.caret
+install(caret)
+library(caret)
+install.packages("caret")
+library(caret)
+install.packages("SparseM")
+library(caret)
+install.packages("caret",#
+                 repos = "http://cran.r-project.org", #
+                 dependencies = c("Depends", "Imports", "Suggests"))
+install.packages("caret",#
+                 repos = "http://cran.r-project.org", #
+                 dependencies = c("Depends", "Imports", "Suggests"))
+library(craet)
+library(caret)
+plot(week, commit)
+plot(data)
+set.seed(998)
+inTraining <- createDataPartition(data, p=.75, list = FALSE)
+fitControl<-trainControl(method="repeatedcv", number=10, repeats=10)
+set.seed(825)
+gbmFit <-train(commits ~ week, data = data, method="gbm", trControl=fitControl, verbose=FALSE)
+gbmfit
+gbmFit
+plot(gbmFit)
+axis(side=1, at=c(1:16))
+plot(y ~ x, data)
+Data<-data.frame(week, commits)
+plot(commits ~ week, Data)
+loess_fit<-loess(commits ~ week, Data)
+lines(Data$week, predict(loess_fit), col = "blue")
+nls_fit<-nls(y~a+b* commits^(-c), Data, start=list(a=80, b=20, c=0.2))
+nls_fit<-nls(week~a+b* commits^(-c), Data, start=list(a=80, b=20, c=0.2))
+nls_fit <- nls(commits ~ a + b * week^(-c), Data, start = list(a = 80, b = 20, #
+    c = 0.2))
+nls_fit <- nls(commits ~ a + b * week^(-c), Data, start = list(a = 8, b = 2, #
+    c = 0.2))
+nls_fit <- nls(commits ~ week, data=data)
+nls_fit <- nls(commits ~ week, data)
+nls_fit <- nls(commits ~ week)
+axis(side=1, at=c(1:16))
+nls_fit <- nls(commits ~ a + b * week^(-c), Data, start = list(a = 0.1, b = 2, #
+    c = 1))
+plot(y ~ x, data)
+plot(commits ~ week, Data)
+loess_fit<-loess(commits ~ week, Data)
+lines(Data$week, predict(loess_fit), col = "blue")
+plot(y ~ x, data)
+plot(commits ~ week, Data)
+lmodel<-lm(formula = log(commits) ~ week)
+lm(formula = log(commits) ~ week)
+commits
+data<-read.csv('commits_combined.csv')
+commits<-data$commit
+week<-data$week
+commits
+lmodel<-lm(formula = log(commits) ~ week)
+plot(lmodel)
+plot(commits ~ week, Data)
+axis(side=1, at=c(1:16))
+abline(lmodel)
+library(ggplot)
+library.install(ggplot)
+install.package("ggplot")
+install.packages("ggplot")
+commits_norm<-rnorm(commits)
+lmodel<-lm(formula=log(commits_norm) ~ week)
+lmodel<-lm(formula=commits_norm ~ week)
+adline(lmodel)
+abline(lmodel)
+plot(commits_norm ~ week, Data)
+adline(lmodel)
+abline(lmodel)
+plot(commits ~ week, Data)
+abline(gbmFit)
+plot(gbmFit)
+week1<-(1,)
+week1<-c(1,)
+predict(gbmFit, c(1,))
+predict(gbmFit, c(1,0))
+predict(gbmFit, data)
+plot(predict(gbmFit, data))
+plot(commits_norm ~ week, Data)
+clear

@@ -1,0 +1,120 @@
+issue_id,action_time,action,what,user,milestone,when
+1,4/19/17,labeled,requirement,user0,,1492569396
+1,2/17/17,moved_columns_in_project,no label,user0,,1487299101
+1,2/17/17,closed,no label,user0,,1487298547
+1,2/10/17,subscribed,no label,user1,,1486734853
+1,2/10/17,mentioned,no label,user1,,1486734853
+1,2/10/17,subscribed,no label,user2,,1486734853
+1,2/10/17,mentioned,no label,user2,,1486734853
+1,2/10/17,assigned,no label,user2,,1486690952
+1,2/10/17,assigned,no label,user1,,1486690952
+1,2/9/17,added_to_project,no label,user0,,1486674364
+1,2/9/17,assigned,no label,user0,,1486672853
+2,4/19/17,labeled,requirement,user0,,1492569410
+2,2/13/17,moved_columns_in_project,no label,user0,,1486996009
+2,2/13/17,closed,no label,user0,,1486996001
+2,2/13/17,moved_columns_in_project,no label,user0,,1486995984
+2,2/9/17,added_to_project,no label,user0,,1486674374
+2,2/9/17,assigned,no label,user0,,1486672899
+3,4/19/17,labeled,requirement,user0,,1492569417
+3,2/13/17,closed,no label,user0,,1486995969
+3,2/13/17,moved_columns_in_project,no label,user0,,1486995963
+3,2/13/17,subscribed,no label,user2,,1486950498
+3,2/13/17,mentioned,no label,user2,,1486950498
+3,2/13/17,subscribed,no label,user1,,1486950498
+3,2/13/17,mentioned,no label,user1,,1486950498
+3,2/9/17,added_to_project,no label,user0,,1486674372
+3,2/9/17,assigned,no label,user0,,1486672933
+4,2/16/17,added_to_project,no label,user0,,1487253802
+4,2/16/17,closed,no label,user0,,1487253656
+4,2/14/17,assigned,no label,user0,,1487111845
+4,2/14/17,labeled,enhancement,user0,,1487111845
+5,2/16/17,added_to_project,no label,user0,,1487253804
+5,2/16/17,closed,no label,user0,,1487253665
+5,2/14/17,labeled,enhancement,user0,,1487111940
+5,2/14/17,assigned,no label,user0,,1487111863
+6,2/17/17,moved_columns_in_project,no label,user0,,1487299095
+6,2/17/17,moved_columns_in_project,no label,user0,,1487299092
+6,2/17/17,closed,no label,user0,,1487295719
+6,2/16/17,added_to_project,no label,user0,,1487253823
+6,2/14/17,labeled,enhancement,user0,,1487111935
+6,2/14/17,assigned,no label,user0,,1487111887
+7,2/17/17,moved_columns_in_project,no label,user0,,1487299089
+7,2/17/17,closed,no label,user0,,1487298525
+7,2/16/17,added_to_project,no label,user0,,1487253827
+7,2/14/17,labeled,enhancement,user0,,1487111929
+7,2/14/17,assigned,no label,user0,,1487111916
+8,2/17/17,moved_columns_in_project,no label,user0,,1487299116
+8,2/17/17,closed,no label,user1,,1487298718
+8,2/16/17,added_to_project,no label,user0,,1487253834
+8,2/15/17,labeled,bug,user1,,1487147336
+8,2/15/17,assigned,no label,user0,,1487147308
+9,2/16/17,closed,no label,user0,,1487253647
+9,2/16/17,merged,no label,user0,,1487253647
+9,2/16/17,referenced,no label,user0,,1487253647
+10,2/17/17,closed,no label,user0,,1487295700
+10,2/17/17,merged,no label,user0,,1487295700
+10,2/17/17,referenced,no label,user0,,1487295700
+11,2/17/17,closed,no label,user0,,1487298515
+11,2/17/17,merged,no label,user0,,1487298515
+11,2/17/17,referenced,no label,user0,,1487298515
+12,2/17/17,closed,no label,user0,,1487341172
+12,2/17/17,merged,no label,user0,,1487341172
+12,2/17/17,referenced,no label,user0,,1487341172
+13,2/20/17,added_to_project,no label,user0,,1487612278
+13,2/18/17,closed,no label,user1,,1487437401
+13,2/18/17,assigned,no label,user2,,1487406130
+13,2/18/17,assigned,no label,user0,,1487406130
+13,2/18/17,assigned,no label,user1,,1487406129
+13,2/18/17,labeled,question,user1,,1487406129
+14,2/20/17,moved_columns_in_project,no label,user0,,1487612334
+14,2/20/17,added_to_project,no label,user0,,1487612254
+14,2/20/17,closed,no label,user0,,1487596944
+14,2/20/17,subscribed,no label,user1,,1487596944
+14,2/20/17,mentioned,no label,user1,,1487596944
+14,2/20/17,labeled,bug,user1,,1487574669
+14,2/20/17,assigned,no label,user0,,1487574655
+15,2/20/17,closed,no label,user0,,1487612220
+15,2/20/17,merged,no label,user0,,1487612220
+15,2/20/17,referenced,no label,user0,,1487612220
+16,2/23/17,closed,no label,user0,,1487859952
+16,2/23/17,merged,no label,user0,,1487859952
+16,2/23/17,referenced,no label,user0,,1487859952
+17,2/23/17,moved_columns_in_project,no label,user0,,1487885329
+17,2/23/17,closed,no label,user0,,1487885310
+17,2/23/17,added_to_project,no label,user0,,1487860042
+17,2/23/17,assigned,no label,user0,,1487860031
+17,2/23/17,labeled,enhancement,user0,,1487860031
+18,4/13/17,closed,no label,user1,,1492114627
+18,3/11/17,subscribed,no label,user0,,1489265553
+18,3/11/17,mentioned,no label,user0,,1489265553
+18,2/28/17,added_to_project,no label,user0,,1488304558
+18,2/28/17,labeled,enhancement,user0,,1488304536
+18,2/28/17,assigned,no label,user0,,1488304527
+19,3/11/17,added_to_project,no label,user0,Demo Day,1489191291
+19,3/10/17,closed,no label,user0,Demo Day,1489119085
+19,3/9/17,assigned,no label,user0,Demo Day,1489019110
+19,3/9/17,assigned,no label,user1,Demo Day,1489019110
+19,3/9/17,milestoned,no label,user1,Demo Day,1489019110
+19,3/9/17,labeled,enhancement,user1,Demo Day,1489019110
+20,3/11/17,added_to_project,no label,user0,Demo Day,1489191289
+20,3/10/17,closed,no label,user1,Demo Day,1489115829
+20,3/10/17,subscribed,no label,user0,Demo Day,1489115433
+20,3/10/17,mentioned,no label,user0,Demo Day,1489115433
+20,3/9/17,assigned,no label,user0,Demo Day,1489088289
+20,3/9/17,assigned,no label,user1,Demo Day,1489088289
+20,3/9/17,milestoned,no label,user1,Demo Day,1489088289
+20,3/9/17,labeled,bug,user1,Demo Day,1489088289
+21,3/10/17,closed,no label,user0,,1489114903
+21,3/10/17,merged,no label,user0,,1489114903
+21,3/10/17,referenced,no label,user0,,1489114903
+22,3/10/17,closed,no label,user0,,1489115666
+22,3/10/17,merged,no label,user0,,1489115666
+22,3/10/17,referenced,no label,user0,,1489115666
+23,3/10/17,closed,no label,user0,,1489116256
+23,3/10/17,merged,no label,user0,,1489116256
+23,3/10/17,referenced,no label,user0,,1489116256
+24,3/27/17,closed,no label,user0,,1490578265
+24,3/27/17,assigned,no label,user0,,1490577714
+24,3/27/17,assigned,no label,user1,,1490577713
+24,3/27/17,labeled,bug,user1,,1490577713
