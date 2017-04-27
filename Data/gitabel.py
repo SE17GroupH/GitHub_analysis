@@ -214,5 +214,5 @@ def launchDump():
         w.writerow([comment.ident, comment.issue, comment.user, comment.created_at, comment.updated_at])
 
         
-token = "6cd28f11890b7314275fa84ba456affc0f12375e"
+token = ""
 launchDump()
