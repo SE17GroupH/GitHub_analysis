@@ -1,4 +1,4 @@
-comment_id,issue_id,user_id,created_at,updated_at,create_convert,update_convert
+comment_id,issue_id,user_id,created_at,updated_at,created_convert,update_convert
 274586537,1,user1,1485198703,1485198703,1/23/17,1/23/17
 274587369,1,user2,1485198882,1485198882,1/23/17,1/23/17
 274589696,1,user1,1485199371,1485199371,1/23/17,1/23/17
