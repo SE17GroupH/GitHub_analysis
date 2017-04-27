@@ -1,0 +1,89 @@
+issue_id,duration,actions,users,labeled,label,days_without_label,days_without_assignee
+1,1,13,"user0, user1, user2",yes,"UI, help wanted",0,0
+2,31,13,"user0, user1",yes,MagicLink,0,0
+3,31,10,"user0, user1, user2",yes,Fingerprint,0,0
+4,31,10,"user0, user1, user2",yes,Fingerprint,0,0
+5,31,16,"user0, user1, user2",yes,MagicLink,0,0
+6,31,13,"user0, user1, user2",yes,VoiceDNA,0,0
+7,1,12,"user0, user1, user2",yes,UI,0,0
+8,31,13,"user0, user1, user2",yes,MagicLink,0,0
+9,31,14,"user0, user1, user2",yes,"Fingerprint, enhancement, lowpriority",0,0
+10,31,14,"user0, user1, user2",yes,"enhancement, MagicLink, lowpriority",0,0
+11,31,14,"user0, user1, user2",yes,"enhancement, VoiceDNA, lowpriority",0,0
+12,31,10,"user1, user2",yes,enhancement,1,0
+13,0,3,user2,no,,0,0
+14,30,13,"user0, user1, user2",yes,urgent,0,0
+15,0,11,user2,yes,"enhancement, UI",0,0
+16,0,18,"user1, user2",yes,UI,0,0
+17,30,13,"user0, user1",yes,Fingerprint,0,0
+18,30,16,"user0, user1",yes,"Fingerprint, VoiceDNA, MagicLink, urgent",0,0
+19,0,8,"user0, user1",no,,0,0
+20,4,5,user0,no,,4,4
+21,0,9,"user0, user1, user2",no,,0,0
+22,0,3,user0,no,,0,0
+23,11,12,"user1, user2",yes,VoiceDNA,0,0
+24,25,23,"user0, user1, user2",yes,question,0,0
+25,0,3,user1,no,,0,0
+26,2,8,user1,yes,bug,0,0
+27,5,17,"user0, user1, user2",yes,"question, urgent",0,0
+28,62,8,user1,yes,requirement,62,0
+29,62,8,user1,yes,requirement,62,0
+30,62,6,user1,yes,requirement,62,0
+31,62,6,user1,yes,requirement,62,0
+32,0,3,user1,no,,0,0
+33,22,7,user1,yes,urgent,0,0
+34,22,8,user1,yes,"UI, urgent",0,0
+35,22,7,user1,yes,urgent,0,0
+36,22,9,user1,yes,urgent,0,0
+37,22,10,user1,yes,"enhancement, UI, lowpriority",0,0
+38,22,9,user1,yes,"enhancement, lowpriority",0,0
+39,0,3,user1,no,,0,0
+40,0,3,user2,no,,0,0
+41,0,3,user2,no,,0,0
+42,0,3,user2,no,,0,0
+43,0,3,user1,no,,0,0
+44,21,14,"user1, user2",yes,bug,0,0
+45,2,10,user2,yes,"VoiceDNA, urgent",0,0
+46,3,13,"user0, user1, user2",yes,"enhancement, question, lowpriority",0,0
+47,5,9,"user1, user2",yes,"bug, mediumpriority, UI",0,0
+48,21,9,user1,yes,"enhancement, lowpriority",0,0
+49,0,4,user1,no,,0,0
+50,52,14,"user1, user2",yes,"bug, mediumpriority",0,0
+51,0,3,user2,no,,0,0
+52,0,3,user2,no,,0,0
+53,0,3,user2,no,,0,0
+54,0,3,user2,no,,0,0
+55,0,3,user2,no,,0,0
+56,0,3,user2,no,,0,0
+57,0,3,user2,no,,0,0
+58,0,3,user2,no,,0,0
+59,16,7,user1,yes,"bug, urgent",0,0
+60,16,10,user1,yes,"bug, mediumpriority, VoiceDNA",0,0
+61,16,11,"user0, user1, user2",yes,urgent,9,0
+62,50,4,,yes,requirement,50,50
+63,46,3,,yes,feedback,46,46
+64,7,4,,yes,"lowpriority, enhancement",7,7
+65,7,17,"user0, user1",yes,"enhancement, lowpriority",0,0
+66,0,4,user1,no,,0,0
+67,0,3,user1,no,,0,0
+68,0,3,user1,no,,0,0
+69,6,4,user1,yes,mediumpriority,0,0
+70,0,4,user1,no,,0,0
+71,6,5,user1,yes,"enhancement, lowpriority",0,0
+72,0,3,user2,no,,0,0
+73,0,3,user2,no,,0,0
+74,0,3,user2,no,,0,0
+75,0,3,user2,no,,0,0
+76,0,3,user2,no,,0,0
+77,0,3,user2,no,,0,0
+78,0,3,user2,no,,0,0
+79,36,5,user1,yes,"enhancement, mediumpriority",0,0
+80,0,3,user1 ,no,,0,0
+81,0,3,user1 ,no,,0,0
+82,3,6,user1,yes,UI,0,0
+83,3,6,user1,yes,"bug, urgent",0,0
+84,35,8,"user1, user2",yes,mediumpriority,0,0
+85,35,5,user1,yes,bug,0,0
+86,0,5,user1,no,,0,0
+87,24,11,"user0, user1, user2",yes,"question, mediumpriority",0,0
+88,0,3,user1,no,,0,0

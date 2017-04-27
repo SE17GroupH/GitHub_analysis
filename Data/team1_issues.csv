@@ -1,0 +1,25 @@
+issue_id,duration,actions,users,labeled,label,days_without_label,days_without_assignee
+1,69,11,"user0, user1, user2",yes,requirement,69,0
+2,69,6,user0,yes,requirement,69,0
+3,69,9,"user0, user1, user2",yes,requirement,69,0
+4,2,4,user0,yes,enhancement,0,0
+5,2,4,user0,yes,enhancement,0,0
+6,2,6,user0,yes,enhancement,0,0
+7,3,5,user0,yes,enhancement,0,0
+8,2,5,"user0, user1",yes,bug,0,0
+9,0,3,user0,no,,0,0
+10,0,3,user0,no,,0,0
+11,0,3,user0,no,,0,0
+12,0,3,user0,no,,0,0
+13,2,6,"user0, user1, user2",yes,question,0,0
+14,0,7,"user0, user1",yes,bug,0,0
+15,0,3,user0,no,,0,0
+16,0,3,user0,no,,0,0
+17,0,5,user0,yes,enhancement,0,0
+18,44,6,"user0, user1",yes,enhancement,0,0
+19,2,6,"user0, user1",yes,enhancement,0,0
+20,2,8,"user0, user1",yes,bug,0,0
+21,0,3,user0,no,,0,0
+22,0,3,user0,no,,0,0
+23,0,3,user0,no,,0,0
+24,0,4,"user0, user1",yes,bug,0,0
