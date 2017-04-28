@@ -1,0 +1,7 @@
+data<-read.csv("combined.csv")
+slices<-c(sum(data$user1), sum(data$user2), sum(data$user3))
+lbls<-c("user1", "user2", "user3")
+pct=round(slices/sum(slices)*100)
+lbls<-paste(lbls, pct)
+lbls<-paste(lbls, "%", sep="")
+pie(slices, labels=lbls, col=rainbow(length(lbls)))
