@@ -5,7 +5,6 @@ week<-data$week
 norm_commit<-rnorm(commit, mean = mean(commit), sd=1)
 scale(commit, center = TRUE, scale = TRUE)
 zscore<-(commit-mean(commit)/sd(commit))
-
 zscore_norm<-(norm_commit-mean(norm_commit)/sd(norm_commit))
 # plot(week, zscore, type="o", col="blue")
 # plot(week, zscore_norm, type="o", col="blue")
@@ -16,12 +15,12 @@ p+geom_hline(yintercept=-1.5, col="red")+labs(x="week")+labs(y="commit z score")
 
 #plot for addition(z score)
 addition<-data$additions
-norm_addition<-rnorm(addition, mean=mean(addition), sd=1)
-scale(addition, center=TRUE, scale=TRUE)
-zscore_add_norm<-(norm_addition-mean(norm_addition)/sd(norm_addition))
-df<-data.frame(wk=week, add=norm_addition)
+# norm_addition<-rnorm(addition, mean=mean(addition), sd=1)
+# scale(addition, center=TRUE, scale=TRUE)
+# zscore_add_norm<-(norm_addition-mean(norm_addition)/sd(norm_addition))
+df<-data.frame(wk=week, add=addition)
 p<-ggplot(df, aes(wk, add, group=1))+geom_point()+geom_line()
-p+labs(x="week")+labs(y="addition z score")
+p+labs(x="week")+labs(y="addition")
 # scatter.smooth(x=1:length(data$week), y=zscore_norm)
 # axis(side=1, at=c(1:16))
 
