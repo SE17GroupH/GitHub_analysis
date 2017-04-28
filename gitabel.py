@@ -22,19 +22,7 @@ import sys, random, os
 #global variables
 token = "c7d1370fae648c6fba6885f799be1cf7084a146e" #can set token here
 #token = "" #set your token here 
-class L():
-  "Anonymous container"
-  def __init__(i,**fields) : 
-    i.override(fields)
-  def override(i,d): i.__dict__.update(d); return i
-  def __repr__(i):
-    d = i.__dict__
-    name = i.__class__.__name__
-    return name+'{'+' '.join([':%s %s' % (k,pretty(d[k])) 
-                     for k in i.show()])+ '}'
-  def show(i):
-    lst = [str(k)+" : "+str(v) for k,v in i.__dict__.items() if v != None]
-    return ',\t'.join(map(str,lst))
+
   
 def secs(d0):
   d     = datetime.datetime(*list(map(int, re.split('[^\d]', d0)[:-1])))
