@@ -1,5 +1,6 @@
 data<-read.csv('group1_commit_data.csv')
 commit<-data$commits
+week<-data$week
 norm_commit<-rnorm(commit, mean =0, sd=1)
 scale(commit, center = TRUE, scale = TRUE)
 zscore<-(commit-mean(commit)/sd(commit))
@@ -29,3 +30,7 @@ y.points<-x1[intersect.points] + (x1.slopes*(x.points-intersect.points))
 plot(x1,type='l')
 lines(x2,type='l',col='red')
 points(x.points,y.points,col='blue')
+
+#mark points
+
+badsmell_points<-
