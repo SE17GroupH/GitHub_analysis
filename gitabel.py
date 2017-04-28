@@ -1,11 +1,4 @@
-#  gitabel
-#  the world's smallest project management tool
-#  reports relabelling times in github (time in seconds since epoch)
-#  thanks to dr parnin
-#  todo:
-#    - ensure events sorted by time
-#    - add issue id
-#    - add person handle
+#  gitabel Python3 version by TeamH
 
 """
 You will need to add your authorization token in the code.
@@ -18,19 +11,17 @@ Copy the value for that key and paste it on line marked "token" in the attached 
 3) Run the python file. 
      python gitable.py
 """
+ 
 
-# Source refered - https://github.com/CSC510-2015-Axitron/project2/blob/master/gitable-sql.py
- 
-from __future__ import print_function
-import urllib.request
-import urllib.error
-import urllib.parse
-import json
-import re,datetime
-import sys
-import csv
-import random
- 
+import urllib.request, urllib.error, urllib.parse
+import json, csv
+import re, datetime
+import sys, random, os
+
+
+#global variables
+token = "c7d1370fae648c6fba6885f799be1cf7084a146e" #can set token here
+#token = "" #set your token here 
 class L():
   "Anonymous container"
   def __init__(i,**fields) : 
@@ -44,175 +35,259 @@ class L():
   def show(i):
     lst = [str(k)+" : "+str(v) for k,v in i.__dict__.items() if v != None]
     return ',\t'.join(map(str,lst))
-
   
 def secs(d0):
-  d     = datetime.datetime(*map(int, re.split('[^\d]', d0)[:-1]))
+  d     = datetime.datetime(*list(map(int, re.split('[^\d]', d0)[:-1])))
   epoch = datetime.datetime.utcfromtimestamp(0)
   delta = d - epoch
   return delta.total_seconds()
-  
-def anonymize_user(user_dict, user):
-  if user_dict.get(user,None) == None:
-    count = len(user_dict)
-    user_dict[user] = 'user'+ str(count)
-  return user_dict[user] 
-  
-def anonymize_teams(team_dict, team):
-  if team_dict.get(team,None) == None:
-    count = len(team_dict)
-    team_dict[team] = 'team'+ str(count)
-  return team_dict[team]
-    
  
-def dumpIssues2(u,issues, users):
+def dump1(u,issues, mapping):
+  """
+  requires github access token
+  returns dictionary of labeled issues with its list of events.
+  """
+  
+  # if token == "22c5702a9526267cef83440a3c8c0e82d9bb43a6":
+  #   try:  
+  #     token = os.environ['GITHUB_TOKEN']
+  #   except KeyError: 
+  #     print("Please set the environment variable GITHUB_TOKEN")
+  #     print("In bash: GITHUB_TOKEN=<your_token>;export GITHUB_TOKEN")
+  #     sys.exit(1)
+  
   request = urllib.request.Request(u, headers={"Authorization" : "token "+token})
   v = urllib.request.urlopen(request).read()
-  w = json.loads(v)
-  if not w: return False
+  w = json.loads(v.decode())
+  if not w: 
+    return False
+  
+  random.shuffle(w)
+  
   for event in w:
+    if not event.get('label'):
+      # we don't want any issue with no label
+      # cannot derive any useful insight from it
+      # as we do not have the title/content of the issue
+      continue
+
     issue_id = event['issue']['number']
-    # if not event.get('label'): continue
-    created_at = secs(event['created_at'])
+    #created_at = secs(event['created_at'])
+    created_at = event['created_at']
     action = event['event']
-    label_name = 'no label'
-    if event.get('label'): label_name = event['label']['name']
-    user = anonymize_user(users, event['actor']['login'])
+    label_name = event['label']['name']
+    
     milestone = event['issue']['milestone']
-    if milestone != None : milestone = milestone['title']
+    if milestone != None : 
+      milestone = milestone['title']
+    
+    user = event['actor']['login']
+    if not mapping.get(user):
+      mapping[user] = "user{}".format(len(mapping)+1)
+    user = mapping[user]
+
     eventObj = L(when=created_at,
-                 action = action,
-                 what = label_name,
-                 user = user,
-                 milestone = milestone)
-    all_events = issues.get(issue_id)
-    if not all_events: all_events = []
-    all_events.append(eventObj)
-    issues[issue_id] = all_events
+           action = action,
+           what = label_name,
+           user = user,
+           milestone = milestone)
+    
+    #issueObj = L(created=created_at)
+
+    if not issues.get(issue_id): 
+      issues[issue_id] = []
+    issues[issue_id].append(eventObj)
+  
+  for issue,events in issues.items():
+    events.sort(key=lambda event: event.when)
+
   return True
 
-def dumpIssues1(u,issues, users):
+def dump(u,issues, mapping):
   try:
-    return dumpIssues2(u, issues, users)
+    return dump1(u, issues, mapping)
   except Exception as e: 
     print(e)
     print("Contact TA")
     return False
-    
-def dumpIssues(repo,issues,users):
-  page = 1
-  while(True):
-    doNext = dumpIssues1('https://api.github.com/repos/'+repo+'/issues/events?page=' + str(page), issues, users)
-    page += 1
-    if not doNext : break
-    
-def dumpMilestone(repo, milestone_dict):
-  page = 1
-  while(True):
-    url = 'https://api.github.com/repos/'+repo+'/milestones/' + str(page)
-    print ("milestone page:"+url)
-    doNext = dumpMilestone1(url, milestone_dict)
-    page += 1
-    if not doNext : break
 
-def dumpMilestone1(u,milestones):
-  try:
-    return dumpMilestone2(u, milestones)
-  except urllib.request.HTTPError as e:
-    if e.code == 404:
-      return False
-    
-    
-def dumpMilestone2(u, milestones):
-  request = urllib.request.Request(u, headers={"Authorization" : "token "+token})
+
+
+def extractGroupCommitData(url, token, alias):
+  commit_data = {}
+  request = urllib.request.Request(url, headers={"Authorization" : "token "+token})
   v = urllib.request.urlopen(request).read()
-  milestone = json.loads(v)
-  if not milestone or ('message' in milestone and milestone['message'] == "Not Found"): return False
-  id = milestone['id']
-  title = milestone['title']
-  created_at = secs(milestone['created_at'])
-  due_at = secs(milestone['due_on']) if milestone['due_on'] != None  else 0
-  closed_at = secs(milestone['closed_at']) if milestone['closed_at'] != None else 0
-    
-  milestoneObj = L(id=id,
-               title = title,
-               created_at=created_at,
-               due_at = due_at,
-               closed_at = closed_at)
-  milestones[id] = milestoneObj
-  return True
-  
-def dumpComments(repo, comments,users):
-  page = 1
-  while(True):
-    comments_url = 'https://api.github.com/repos/'+repo+'/issues/comments?page='+str(page)
-    doNext = dumpComments1(comments_url, comments, token, users)
-    print("comments page "+str(page))
-    page += 1
-    if not doNext: break
-
-def dumpComments1(url, comments, token, users):
-  try:
-    request = urllib.request.Request(url, headers={"Authorization" : "token "+token})
-    v = urllib.request.urlopen(request).read()
-    w = json.loads(v)
-    if not w:
-      return False
-    for comment in w:
-      user = anonymize_user(users, comment['user']['login'])
-      commentObj = L(ident = comment['id'],
-                  issue = int((comment['issue_url'].split('/'))[-1]), 
-                  user = user,
-                  created_at = secs(comment['created_at']),
-                  updated_at = secs(comment['updated_at']))
-      comments.append(commentObj)
-      print("comment id = "+str(comment['id']))
-    return True
-  except Exception as e:
-    print(url)
-    print(e)
+  j = json.loads(v.decode())
+  if not j: 
     return False
 
-def launchDump():
-  team_id = 0
-  team_list = ['SE17GroupH/Zap', 
-            'SE17GroupH/ZapServer', 
-            'karanjadhav2508/kqsse17',
-            'NCSU-SE-Spring-17/SE-17-S'
-            ]
-  random.shuffle(team_list)
+  commit_data = {}
+
+  i = 0
+  for contributor in j:
+    i += 1
+    for week in contributor["weeks"]:
+      week_time = week["w"]
+      week_additions = week["a"]
+      week_commits = week["c"]
+
+      if week_time in commit_data:
+        week_dict = commit_data[week_time]
+        week_dict['commits'] += week_commits
+        week_dict['additions'] += week_additions
+        week_dict[str(i)] = week_commits
+
+        if week_dict['commits'] != 0:
+          week_dict['additions_per_commit'] = int(week_dict['additions']/ week_dict['commits'])
+        else:
+          week_dict['additions_per_commit'] = 0
+
+      else:
+        week_dict = {}
+        week_dict['commits'] = week_commits
+        week_dict['additions'] = week_additions
+        week_dict[str(i)] = week_commits
+        if week_dict['commits'] != 0:
+          week_dict['additions_per_commit'] = int(week_dict['additions']/ week_dict['commits'])
+        else:
+          week_dict['additions_per_commit'] = 0       
+        commit_data[week_time] = week_dict
+
+  #write data to csv file
+  filename = alias+"_commit_data" + ".csv"
+  with open(filename, 'w', newline='') as outputFile:
+    outputWriter = csv.writer(outputFile)
+    outputWriter.writerow(["week", "commits", "additions", "additions_per_commit", "user1", "user2", "user3", "user4"])
+    for x in commit_data:
+      user_4 = '0'
+      if'4' in commit_data[x]:
+        user_4 = commit_data[x]['4']
+
+      outputWriter.writerow([x, commit_data[x]['commits'], commit_data[x]['additions'], commit_data[x]['additions_per_commit'], commit_data[x]['1'],commit_data[x]['2'],commit_data[x]['3'], user_4 ])
+
+
+
+def dumpMilestone(url, milestones, token):
+  request = urllib.request.Request(url, headers={"Authorization" : "token "+token})
+  v = urllib.request.urlopen(request).read()
+  w = json.loads(v.decode())
+  if not w or ('message' in w and w['message'] == "Not Found"): return False
   
-  for repo in team_list:
-    team_id = team_id + 1
-    issues = dict()
-    milestone_dict = dict()
-    comments = []
-    users = dict()
+  milestone = w
+  identifier = milestone['id']
+  milestone_id = milestone['number']
+  milestone_title = milestone['title']
+  milestone_description = milestone['description']
+
+  # created_at = secs(milestone['created_at'])
+  # due_at_string = milestone['due_on']
+
+  # due_at = secs(due_at_string) if due_at_string != None else due_at_string
+  # print(due_at)
+  # closed_at_string = milestone['closed_at']
+  # closed_at = secs(closed_at_string) if closed_at_string != None else closed_at_string
+  
+  created_at = milestone['created_at']
+  due_at = milestone['due_on']
+  closed_at = milestone['closed_at']
+
+  user = milestone['creator']['login']
+  open_issues = milestone['open_issues']
+  closed_issues = milestone['closed_issues']
+  milestoneObj = L(ident=identifier,
+             m_id = milestone_id,
+             m_title = milestone_title,
+             m_description = milestone_description,
+             created_at=created_at,
+             due_at = due_at,
+             closed_at = closed_at,
+             user = user,
+             open_issues = open_issues,
+             closed_issues = closed_issues)
+
+  milestones.append(milestoneObj)
+  return True
+
+def extractGroupMilestoneData(url, token, alias):
+  milestones = []
+  page = 1
+  while(True):
+
+    milestone_url = url + "/" + str(page)
+    print(url)
+    doNext = False
+    try:
+      doNext = dumpMilestone(milestone_url, milestones, token)
+    except Exception as e:
+      print("Exception")
+      doNext = False
+
+    print("milestone "+ str(page))
+    page = page + 1
+    if not doNext: 
+      break
+
+  #write data to csv file
+  file = alias+"_milestone_data" + ".csv"
+  with open(file, 'w', newline='') as outputFile:
+    outputWriter = csv.writer(outputFile)
+    outputWriter.writerow(["id", "opened_at", "closed_at", "due_on", "closed_issues", "open_issues"])
+    for m in milestones:
+      outputWriter.writerow([m.m_id, m.created_at, m.due_at, m.closed_at, m.closed_issues, m.open_issues])
+
+
+def launchDump():
+  repos = ['karanjadhav2508/kqsse17',
+      'SE17GroupH/Zap', 
+      'SE17GroupH/ZapServer',
+      'Rushi-Bhatt/SE17-Team-K',
+      'zsthampi/SE17-Group-N', 
+      'rnambis/SE17-group-O', 
+      'genterist/whiteWolf', 
+      'harshalgala/se17-Q', 
+      'NCSU-SE-Spring-17/SE-17-S', 
+      'SidHeg/se17-teamD', 
+      'syazdan25/SE17-Project'
+      ]
+
+  with open("private_mappings.csv", 'w', newline='') as file:
+    outputWriter = csv.writer(file)
+    outputWriter.writerow(['original', 'alias'])
     
-    dumpIssues(repo,issues,users)
-    with open('team'+str(team_id)+'.csv', 'w') as file: 
-      w = csv.writer(file)
-      w.writerow(["issue_id", "when", "action", "what", "user", "milestone"])
-      for issue in sorted(issues.keys()):
-          events = issues[issue]
-          for event in events: w.writerow([issue, event.when, event.action, event.what, event.user, event.milestone])
+  random.shuffle(repos)
+
+  for index,reponame in enumerate(repos):
+    page = 1
+    issues, mapping = {}, {}
     
-    dumpMilestone(repo,milestone_dict)
-    with open('milestone'+str(team_id)+'.csv', 'w') as file: 
-      w = csv.writer(file)
-      w.writerow(["milestone_id", "milestone_title", "created_at", "due_at", "closed_at"])
-      for key in milestone_dict.keys():
-        milestone = milestone_dict[key]
-        w.writerow([milestone.id, milestone.title, milestone.created_at, milestone.due_at, milestone.closed_at])
+    repo_url = 'https://api.github.com/repos/{}/issues/events?page='.format(reponame)+'{}'
+    print(repo_url);
+    while(dump(repo_url.format(page), issues, mapping)):
+      page += 1
+    
+    group_id = "group{}".format(index+1)
+    with open("private_mappings.csv", 'a', newline='') as file:
+      outputWriter = csv.writer(file)
+      outputWriter.writerow([reponame, group_id])
+      for username, user_id in mapping.items():
+        outputWriter.writerow([username, user_id])
+
+    filename = group_id+".csv"
+    with open(filename, 'w', newline='') as outputFile:
+      outputWriter = csv.writer(outputFile)
+      outputWriter.writerow(["issue_id", "when", "action", "what", "user", "milestone"])
+      for issue, events in issues.items():
+        for event in events: 
+          outputWriter.writerow([issue, event.when, event.action, event.what, event.user, event.milestone])
 
 
-    dumpComments(repo,comments,users)
-    with open('comments'+str(team_id)+'.csv', 'w') as file:
-      w = csv.writer(file)
-      w.writerow(["comment_id", "issue_id", "user_id", "created_at", "updated_at"])
-      for comment in comments:
-        w.writerow([comment.ident, comment.issue, comment.user, comment.created_at, comment.updated_at])
+    #commit
+    commit_repo = 'https://api.github.com/repos/{}/stats/contributors'.format(reponame)
+    extractGroupCommitData(commit_repo, token, group_id)
 
-        
-token = "6cd28f11890b7314275fa84ba456affc0f12375e"
+    #milestone
+    #milestone_repo = 'https://api.github.com/repos/{}/milestones'.format(reponame)
+    #extractGroupMilestoneData(milestone_repo, token, group_id)
+
+
 launchDump()
