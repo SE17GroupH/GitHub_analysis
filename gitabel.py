@@ -20,8 +20,8 @@ import sys, random, os
 
 
 #global variables
-token = "" #can set token here
-#token = "" #set your token here 
+
+token = "" #set your token here 
 class L():
   "Anonymous container"
   def __init__(i,**fields) : 
@@ -238,22 +238,29 @@ def extractGroupMilestoneData(url, token, alias):
 
 
 def launchDump():
-  repos = ['karanjadhav2508/kqsse17',
+  # repos = ['karanjadhav2508/kqsse17',
+  #     'SE17GroupH/Zap', 
+  #     'SE17GroupH/ZapServer',
+  #     'Rushi-Bhatt/SE17-Team-K',
+  #     'zsthampi/SE17-Group-N', 
+  #     'rnambis/SE17-group-O', 
+  #     'genterist/whiteWolf', 
+  #     'harshalgala/se17-Q', 
+  #     'NCSU-SE-Spring-17/SE-17-S', 
+  #     'SidHeg/se17-teamD', 
+  #     'syazdan25/SE17-Project'
+  #     ]
+
+  repos = [
       'SE17GroupH/Zap', 
       'SE17GroupH/ZapServer',
-      'Rushi-Bhatt/SE17-Team-K',
-      'zsthampi/SE17-Group-N', 
-      'rnambis/SE17-group-O', 
-      'genterist/whiteWolf', 
       'harshalgala/se17-Q', 
       'NCSU-SE-Spring-17/SE-17-S', 
-      'SidHeg/se17-teamD', 
-      'syazdan25/SE17-Project'
       ]
 
-  with open("private_mappings.csv", 'w', newline='') as file:
-    outputWriter = csv.writer(file)
-    outputWriter.writerow(['original', 'alias'])
+  # with open("private_mappings.csv", 'w', newline='') as file:
+  #   outputWriter = csv.writer(file)
+  #   outputWriter.writerow(['original', 'alias'])
     
   random.shuffle(repos)
 
