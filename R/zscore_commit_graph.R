@@ -10,7 +10,8 @@ zscore_norm<-(norm_commit-mean(norm_commit)/sd(norm_commit))
 # plot(week, zscore, type="o", col="blue")
 # plot(week, zscore_norm, type="o", col="blue")
 df<-data.frame(gp=week, y=zscore_norm)
-ggplot(df, aes(gp, y, group=1))+geom_point()+geom_line()
+p<-ggplot(df, aes(gp, y, group=1))+geom_point()+geom_line()
+p+geom_hline(yintercept=-0.5, col="red")
 
 
 # scatter.smooth(x=1:length(data$week), y=zscore_norm)
