@@ -20,7 +20,7 @@ import sys, random, os
 
 
 #global variables
-token = "c7d1370fae648c6fba6885f799be1cf7084a146e" #can set token here
+token = "" #can set token here
 #token = "" #set your token here 
 class L():
   "Anonymous container"
@@ -127,7 +127,8 @@ def extractGroupCommitData(url, token, alias):
   for contributor in j:
     i += 1
     for week in contributor["weeks"]:
-      week_time = week["w"]
+      #week_time = week["w"]
+      week_time = datetime.datetime.fromtimestamp(int(week["w"])).strftime('%m-%d')
       week_additions = week["a"]
       week_commits = week["c"]
 
@@ -266,19 +267,19 @@ def launchDump():
       page += 1
     
     group_id = "group{}".format(index+1)
-    with open("private_mappings.csv", 'a', newline='') as file:
-      outputWriter = csv.writer(file)
-      outputWriter.writerow([reponame, group_id])
-      for username, user_id in mapping.items():
-        outputWriter.writerow([username, user_id])
+    # with open("private_mappings.csv", 'a', newline='') as file:
+    #   outputWriter = csv.writer(file)
+    #   outputWriter.writerow([reponame, group_id])
+    #   for username, user_id in mapping.items():
+    #     outputWriter.writerow([username, user_id])
 
-    filename = group_id+".csv"
-    with open(filename, 'w', newline='') as outputFile:
-      outputWriter = csv.writer(outputFile)
-      outputWriter.writerow(["issue_id", "when", "action", "what", "user", "milestone"])
-      for issue, events in issues.items():
-        for event in events: 
-          outputWriter.writerow([issue, event.when, event.action, event.what, event.user, event.milestone])
+    # filename = group_id+".csv"
+    # with open(filename, 'w', newline='') as outputFile:
+    #   outputWriter = csv.writer(outputFile)
+    #   outputWriter.writerow(["issue_id", "when", "action", "what", "user", "milestone"])
+    #   for issue, events in issues.items():
+    #     for event in events: 
+    #       outputWriter.writerow([issue, event.when, event.action, event.what, event.user, event.milestone])
 
 
     #commit
