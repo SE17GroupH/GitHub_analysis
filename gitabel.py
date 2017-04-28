@@ -20,9 +20,27 @@ import sys, random, os
 
 
 #global variables
+<<<<<<< HEAD
 token = "c7d1370fae648c6fba6885f799be1cf7084a146e" #can set token here
 #token = "" #set your token here 
 
+=======
+
+token = "" #set your token here 
+class L():
+  "Anonymous container"
+  def __init__(i,**fields) : 
+    i.override(fields)
+  def override(i,d): i.__dict__.update(d); return i
+  def __repr__(i):
+    d = i.__dict__
+    name = i.__class__.__name__
+    return name+'{'+' '.join([':%s %s' % (k,pretty(d[k])) 
+                     for k in i.show()])+ '}'
+  def show(i):
+    lst = [str(k)+" : "+str(v) for k,v in i.__dict__.items() if v != None]
+    return ',\t'.join(map(str,lst))
+>>>>>>> refs/remotes/origin/master
   
 def secs(d0):
   d     = datetime.datetime(*list(map(int, re.split('[^\d]', d0)[:-1])))
@@ -115,7 +133,8 @@ def extractGroupCommitData(url, token, alias):
   for contributor in j:
     i += 1
     for week in contributor["weeks"]:
-      week_time = week["w"]
+      #week_time = week["w"]
+      week_time = datetime.datetime.fromtimestamp(int(week["w"])).strftime('%m-%d')
       week_additions = week["a"]
       week_commits = week["c"]
 
@@ -225,22 +244,29 @@ def extractGroupMilestoneData(url, token, alias):
 
 
 def launchDump():
-  repos = ['karanjadhav2508/kqsse17',
+  # repos = ['karanjadhav2508/kqsse17',
+  #     'SE17GroupH/Zap', 
+  #     'SE17GroupH/ZapServer',
+  #     'Rushi-Bhatt/SE17-Team-K',
+  #     'zsthampi/SE17-Group-N', 
+  #     'rnambis/SE17-group-O', 
+  #     'genterist/whiteWolf', 
+  #     'harshalgala/se17-Q', 
+  #     'NCSU-SE-Spring-17/SE-17-S', 
+  #     'SidHeg/se17-teamD', 
+  #     'syazdan25/SE17-Project'
+  #     ]
+
+  repos = [
       'SE17GroupH/Zap', 
       'SE17GroupH/ZapServer',
-      'Rushi-Bhatt/SE17-Team-K',
-      'zsthampi/SE17-Group-N', 
-      'rnambis/SE17-group-O', 
-      'genterist/whiteWolf', 
       'harshalgala/se17-Q', 
       'NCSU-SE-Spring-17/SE-17-S', 
-      'SidHeg/se17-teamD', 
-      'syazdan25/SE17-Project'
       ]
 
-  with open("private_mappings.csv", 'w', newline='') as file:
-    outputWriter = csv.writer(file)
-    outputWriter.writerow(['original', 'alias'])
+  # with open("private_mappings.csv", 'w', newline='') as file:
+  #   outputWriter = csv.writer(file)
+  #   outputWriter.writerow(['original', 'alias'])
     
   random.shuffle(repos)
 
@@ -254,19 +280,19 @@ def launchDump():
       page += 1
     
     group_id = "group{}".format(index+1)
-    with open("private_mappings.csv", 'a', newline='') as file:
-      outputWriter = csv.writer(file)
-      outputWriter.writerow([reponame, group_id])
-      for username, user_id in mapping.items():
-        outputWriter.writerow([username, user_id])
+    # with open("private_mappings.csv", 'a', newline='') as file:
+    #   outputWriter = csv.writer(file)
+    #   outputWriter.writerow([reponame, group_id])
+    #   for username, user_id in mapping.items():
+    #     outputWriter.writerow([username, user_id])
 
-    filename = group_id+".csv"
-    with open(filename, 'w', newline='') as outputFile:
-      outputWriter = csv.writer(outputFile)
-      outputWriter.writerow(["issue_id", "when", "action", "what", "user", "milestone"])
-      for issue, events in issues.items():
-        for event in events: 
-          outputWriter.writerow([issue, event.when, event.action, event.what, event.user, event.milestone])
+    # filename = group_id+".csv"
+    # with open(filename, 'w', newline='') as outputFile:
+    #   outputWriter = csv.writer(outputFile)
+    #   outputWriter.writerow(["issue_id", "when", "action", "what", "user", "milestone"])
+    #   for issue, events in issues.items():
+    #     for event in events: 
+    #       outputWriter.writerow([issue, event.when, event.action, event.what, event.user, event.milestone])
 
 
     #commit
