@@ -20,6 +20,11 @@ import sys, random, os
 
 
 #global variables
+<<<<<<< HEAD
+token = "c7d1370fae648c6fba6885f799be1cf7084a146e" #can set token here
+#token = "" #set your token here 
+
+=======
 
 token = "" #set your token here 
 class L():
@@ -35,6 +40,7 @@ class L():
   def show(i):
     lst = [str(k)+" : "+str(v) for k,v in i.__dict__.items() if v != None]
     return ',\t'.join(map(str,lst))
+>>>>>>> refs/remotes/origin/master
   
 def secs(d0):
   d     = datetime.datetime(*list(map(int, re.split('[^\d]', d0)[:-1])))
