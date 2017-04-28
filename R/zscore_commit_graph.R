@@ -10,7 +10,7 @@ axis(side=1, at=c(1:16))
 
 # Finding intersection with threshold
 
-adline(h=-0.5, type="o", col="red", lty = 2)
+# abline(h=-0.5, type="o", col="red", lty = 2)
 #lines(h=-0.5, type="o", col="red", lty = 2)
 x1<-zscore_norm
 threshold <- -0.5
