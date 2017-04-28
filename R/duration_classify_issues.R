@@ -1,3 +1,4 @@
+library(gridBase)
 data<-read.csv("SE17GroupH_Zap_issues.csv")
 duration<-data$duration
 dur0<-sum(duration==0)
@@ -45,3 +46,28 @@ dur450<-sum(duration>=400 & duration<450)
 dur500<-sum(duration>=450 & duration<500)
 dur550<-sum(duration>=500 & duration<550)
 dur600<-sum(duration>=550 & duration<600)
+dur650<-sum(duration>=600 & duration<650)
+dur700<-sum(duration>=650 & duration<700)
+dur750<-sum(duration>=700 & duration<750)
+dur800<-sum(duration>=750 & duration<800)
+dur850<-sum(duration>=800 & duration<850)
+dur900<-sum(duration>=850 & duration<900)
+dur950<-sum(duration>=900 & duration<950)
+dur1000<-sum(duration>=950 & duration<1000)
+dur1050<-sum(duration>=1000 & duration<1050)
+dur1100<-sum(duration>=1050 & duration<1100)
+dur1150<-sum(duration>=1100 & duration<1150)
+dur1200<-sum(duration>=1150 & duration<1200)
+dur1200plus<-sum(duration>=1200)
+counts<-c(dur50, dur100, dur150, dur200, dur250, dur300, dur350, dur400, dur450, dur500, dur550, dur600, dur650, dur700, dur750, dur800, dur850, dur900, dur950, dur1000, dur1050, dur1100, dur1150, dur1200, dur1200plus)
+names<-c("24-49", "50-99", "100-149", "150-199", "200-249", "250-299", "300-349", "350-399", "400-449", "450-499", "500-549", "550-599", "600-649", "650-699", "700-749", "750-799", "800-849", "850-899", "900-949", "950-999","1000-1049", "1050-1099","1100-1149","1150-1199","1200+")
+issues_24plus<-data.frame(names, counts)
+barplot(issues_24plus$counts, main="Issues closed more than 24 hours for Team1", names.arg=issues_24plus$names, las=2)
+
+
+
+
+
+
+
+
