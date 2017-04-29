@@ -7,8 +7,8 @@ users_global = {}
 
 def get_url_json(url):
 	"""get json data from a url"""
-	#token = "22c5702a9526267cef83440a3c8c0e82d9bb43a6"
-	request = urllib.request.Request(url)#, headers={"Authorization" : "token "+token})
+	token = ""
+	request = urllib.request.Request(url, headers={"Authorization" : "token "+token})
 	return json.loads(urllib.request.urlopen(request).read().decode())
 
 def calc_duration(start_time, end_time):
