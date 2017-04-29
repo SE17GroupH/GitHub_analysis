@@ -1,6 +1,10 @@
 import urllib.request, urllib.error, urllib.parse
 import json, csv, datetime, re, random
 
+
+#global variable
+users_global = {}
+
 def get_url_json(url):
 	"""get json data from a url"""
 	#token = "22c5702a9526267cef83440a3c8c0e82d9bb43a6"
@@ -30,8 +34,13 @@ def process_issues(issues, issues_json):
 			new_issue['duration'] = "None"
 
 		new_issue['comments'] = issue['comments']
-		new_issue["created_by"] = issue['user']['login']
-		
+		#new_issue["created_by"] = issue['user']['login']
+		########
+		user = issue['user']['login']
+		if not users_global.get(user):
+			users_global[user] = "user{}".format(len(users_global)+1)
+		########
+		new_issue["created_by"] = users_global[user]
 		if issue['html_url'].find("/pull/")!=-1:
 			new_issue["pull_request"] = "Yes"
 		else:
@@ -40,7 +49,12 @@ def process_issues(issues, issues_json):
 		if issue['assignees']:
 			assignees = []
 			for user in issue['assignees']:
-				assignees.append(user['login'])
+				#assignees.append(user['login'])
+				########
+				if not users_global.get(user['login']):
+					users_global[user['login']] = "user{}".format(len(users_global)+1)
+				########
+				assignees.append(users_global[user['login']])
 			new_issue["assignees"] = assignees
 		else:
 			new_issue["assignees"] = []
@@ -82,11 +96,14 @@ def write_csv(data_dict_keys, data_dict, filename):
 				row.append(data_dict[item][key])
 			outputWriter.writerow(row)
 
-repos = ["SE17GroupH/Zap"]
+repos = ["SE17GroupH/Zap", "SE17GroupH/ZapServer", "SidHeg/se17-teamD", "NCSU-SE-Spring-17/SE-17-S"]
 
 for index,reponame in enumerate(repos):
 	issues = get_issues(reponame)
-	filename = "{}_issues.csv".format(reponame.replace("/","_"))
-	
+	# filename = "{}_issues.csv".format(reponame.replace("/","_"))
+	filename = "Group{}_issues.csv".format(index)
 	issue_keys = ["id", "state", "pull_request", "created_at", "closed_at", "duration", "created_by", "comments", "assignees", "milestone", "labels"]
 	write_csv(issue_keys, issues, filename)
+	print(users_global)
+	users_global = {}
+
