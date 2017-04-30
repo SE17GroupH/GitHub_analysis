@@ -1,175 +1,426 @@
-install.packages("ggvis")
-library("ggvis")
-search()
-X <- matrix(c(1,2,3,4), nrow =4, ncol =1)#
-Y <- matrix(c(9,6,4,1), nrow =4, ncol =1)#
-calCovariance <- function(x, y){#
-		matrix11 <- sum((x - mean(x)) * (x - mean(x)))/(length(x)-1)#
-		matrix12 <- sum((x - mean(x)) * (y - mean(y)))/(length(x)-1)#
-		matrix21 <- sum((y - mean(y)) * (x - mean(x)))/(length(x)-1)#
-		matrix22 <- sum((y - mean(y)) * (x - mean(x)))/(length(x)-1)#
-		return (matrix(c(matrix11, matrix12, matrix21, matrix22), nrow =2, ncol =2))}#
-cov(cbind(X,Y))#
-calCovariance(X,Y)=cov(cbind(X,Y))
-X <- matrix(c(1,2,3,4), nrow =4, ncol =1)#
-Y <- matrix(c(9,6,4,1), nrow =4, ncol =1)#
-calCovariance <- function(x, y){#
-		matrix11 <- sum((x - mean(x)) * (x - mean(x)))/(length(x)-1)#
-		matrix12 <- sum((x - mean(x)) * (y - mean(y)))/(length(x)-1)#
-		matrix21 <- sum((y - mean(y)) * (x - mean(x)))/(length(x)-1)#
-		matrix22 <- sum((y - mean(y)) * (x - mean(x)))/(length(x)-1)#
-		return (matrix(c(matrix11, matrix12, matrix21, matrix22), nrow =2, ncol =2))}#
-cov(cbind(X,Y))#
-calCovariance(X,Y)
-calCovariance(X,Y)=cov(cbind(X,Y))
-clear
-X <- matrix(c(1,2,3,4), nrow =4, ncol =1)#
-Y <- matrix(c(9,6,4,1), nrow =4, ncol =1)#
-calCovariance <- function(x, y){#
-		matrix11 <- sum((x - mean(x)) * (x - mean(x)))/(length(x)-1)#
-		matrix12 <- sum((x - mean(x)) * (y - mean(y)))/(length(x)-1)#
-		matrix21 <- sum((y - mean(y)) * (x - mean(x)))/(length(x)-1)#
-		matrix22 <- sum((y - mean(y)) * (x - mean(x)))/(length(x)-1)#
-		return (matrix(c(matrix11, matrix12, matrix21, matrix22), nrow =2, ncol =2))}#
-cov(cbind(X,Y))#
-calCovariance(X,Y)==cov(cbind(X,Y))
-X <- matrix(c(1,2,3,4), nrow =4, ncol =1)#
-Y <- matrix(c(9,6,4,1), nrow =4, ncol =1)#
-calCovariance <- function(x, y){#
-		matrix11 <- sum((x - mean(x)) * (x - mean(x)))/(length(x)-1)#
-		matrix12 <- sum((x - mean(x)) * (y - mean(y)))/(length(x)-1)#
-		matrix21 <- sum((y - mean(y)) * (x - mean(x)))/(length(x)-1)#
-		matrix22 <- sum((y - mean(y)) * (y - mean(y)))/(length(y)-1)#
-		return (matrix(c(matrix11, matrix12, matrix21, matrix22), nrow =2, ncol =2))}#
-cov(cbind(X,Y))#
-calCovariance(X,Y)==cov(cbind(X,Y))
-mean((X^2)) == ((mean(X))^2 + (sd(X))^2)
-message("Verifying equation")#
-sigmaSquare = sum((X-mean(X))*(X-mean(X)))/4#
-if(mean(X^2) == mean(X)^2+ sigmaSquare)#
-    cat("Equation verified!")
-message(”Verifying equation”)#
-sigmaSquare = sum((X−mean(X))*(X−mean(X)))/4 if(mean(Xˆ2) == mean(X)ˆ2+ sigmaSquare)#
-cat(”Equation verified !”)
-message(”Verifying equation”)#
-sigmaSquare = sum((X-mean(X))*(X-mean(X)))/4#
-if(mean(X^2) == mean(X)^2+ sigmaSquare)#
-cat("Equation verified!")
-message("Verifying equation")#
-sigmaSquare = sum((X-mean(X))*(X-mean(X)))/4#
-if(mean(X^2) == mean(X)^2+ sigmaSquare)#
-cat("Equation verified!")
-data<-read.csv("comments1.csv")
-dates<-data$created_convert
-dates
-count(data[1:], var="created_convert")
-count(data[1:,], var="created_convert")
-count(data, var="created_convert")
-count(data, "created_convert")
-a<-table(dates)
-a
-write.table(a, file="comments_count_team1.csv")
-write.table(a, file="comments_count_team1.csv", sep=" ")
-write.table(a, file="comments_count_team1.csv", sep="\b")
-write.table(a, file="comments_count_team1.csv", sep=",")
-write.table(a, file="comments_count_team1.csv", sep=",", col.names="id, date, counts")
-data<-read.csv("comments2.csv")
-dates<-data$created_convert
-a<-table(dates)
-write.table(a, file="comments_count_team1.csv", sep=",")
-data<-read.csv("comments3.csv")
-dates<-data$created_convert
-a<-table(dates)
-write.table(a, file="comments_count_team3.csv", sep=",")
-data<-read.csv("comments1.csv")#
-dates<-data$created_convert#
-a<-table(dates)#
-write.table(a, file="comments_count_team1.csv", sep=",")
-data<-read.csv("comments2.csv")
-dates<-data$created_convert#
-a<-table(dates)
-write.table(a, file="comments_count_team2.csv", sep=",")
-data<-read.csv("comments4.csv")
-dates<-data$created_convert#
-a<-table(dates)
-write.table(a, file="comments_count_team4.csv", sep=",")
-data<-read.csv("comments2.csv")
-dates<-data$created_convert#
-a<-table(dates)
-write.table(a, file="comments_count_team2.csv", sep=",")
-data<-read("team1.csv")
-data<-read.csv("team1.csv")
-issue_ids<-data$issue_id
-a<-table(issue_ids)
-a
-a<-table(data)
-a
-a<-table(issue_ids)
-a
-data<-read.csv("team2.csv")
-issue_ids<-data$issue_id
-a<-table(issue_ids)
-A
-a
-data<-read.csv("team3.csv")
-issue_ids<-data$issue_id
-a<-table(issue_ids)
-a
-data<-read.csv("comments_count_team1")
-data<-read.csv("comments_count_team1.csv")
+qplot(week, zscore_norm)
+qplot(week, zscore_norm, type="l")
+?qplot
+?ggplot
+geom_line(aes(x=week, y=zscore_norm, color="pcs"))
+data_plot<-melt(zscore_norm, id_vars=week)
+install.packages("reshape")
+library("reshape")
+data_plot<-melt(zscore_norm, id_vars=week)
+ggplot(aes(x=week, y=zscore_norm, color=variable), data=data_plot)
+ggplot(aes(x=week, y=zscore_norm), data=data_plot)
+ggplot(aes(x=week, y=zscore_norm), data=data_plot) + geom_point() + geom_line()
+data_plot
+data_plot<-melt(zscore_norm, week)
+data_plot
+data_plot<-c(week, zscore)
+data_plot
+data_plot<-merge(week, zscore)
+data_plot
+data_plot<-merge(week, zscore_norm)
+data_plot
+zscore_norm
+ggplot(data, aes(x=week, y=zscore_norm))+geom_point()+geom_line()
+?ggplot
+ggplot(aes(x=week, y=zscore_norm))+geom_point()+geom_line()
+ggplot(df, aes(x=week, y=zscore_norm))+geom_point()+geom_line()
+df<-data.frame(gp=week, y=zscore_norm)
+df
+ggplot(df, aes(gp, y)) +#
+  geom_point() + geom_line()
+ggplot(df, aes(gp, y, group=1)) +#
+  geom_point() + geom_line()
+p<-p<-ggplot(df, aes(gp, y, group=1))+geom_point()+geom_line(
+p<-ggplot(df, aes(gp, y, group=1))+geom_point()+geom_line()
+p+geom_hline(yintercept = -0.5)
+p+geom_abline(yintercept = -0.5)
+p
+p<-ggplot(df, aes(gp, y, group=1))+geom_point()+geom_line()
+p
+p+geom_hline(yintercept=-0.5)
+p+geom_hline(yintercept=-0.5, col="red")
+data<-read.csv("group1_commit_data.csv")
 data
-data<-read.csv("comments_count_team1.csv")
-data<-read.csv("comments_count_team1.csv")
+counts<-table(data$user1, data$user2, data$user3)
+counts
+counts<-data.table(data$user1, data$user2, data$user3)
+data.table(data)
+?data.frame
+counts<-data.frame(data$user1, data$user2, data&user3)
+counts<-data.frame(data$user1, data$user2, data$user3)
+counts
+barplot(counts, main="Commit by different members", xlab="Week", col=c("blue, red, green"))
+counts<-table(counts)
+counts
+counts<-data.frame(data$user1, data$user2, data$user3)
+barplot(as.matrix(counts))
+counts<-data.frame(data$week, data$user1, data$user2, data$user3)
+counts
+barplot(as.matrix(counts), horiz=TRUE)
+library.install9
+library.install(data.table)
+library(data.table)
+counts
+rownames(counts)<-counts[,1]
+counts
+df[,1]<-NULL
+counts[,1]<-NULL
+counts
+final_counts<-t(counts)
+final_counts
+barplot(as.matrix(final_counts), main="Commit by different members", xlab="Week", col=c("blue, red, green"))
+barplot(as.matrix(final_counts), main="Commit by different members", xlab="Week")
+g<-ggplot(final_counts, aes(week))
+g<-ggplot(as.matrix(final_counts), aes(week))
+final_counts
+barplot(counts, col=c("darkblue", "red", "grey"))
+barplot(as.matrix(final_counts), col=c("darkblue", "red", "grey"))
+barplot(as.matrix(final_counts), col=c("darkblue", "red", "yellow"))
+counts
+data<-read.csv("conbined.csv")
+data<-read.csv("conbine.csv")
+data<-read.csv("combined.csv")
 data
-table<-read.table("comments_count_team1.csv")
-table
-table<-read.table("comments_count_team1.csv", header=TRUE)
-table
-counts<-table(table)
-counts
-barplot(table)
-counts<-data$counts
-counts
-barplot(counts, main="Comments Count for Team1", names.arg=data$date)
-threshold<- -0.5
-threshold
-clear
-cl
-clr
-data<-read.csv('group1_commit_data.csv')#
+slices<-c(sum(data$user1), sum(data$user2), sum(data$user3))
+slices
+lbls<-c("user1", "user2", "user3")
+pie(slices, labels=lbls)
+pct=round(slices/sum(slices)*100)
+lbls<-paste(lbls, pct)
+lbls<-paste(lbls, "%", sep="")
+pie(slices, labels=lbls, col=rainbow(length(lbls)))
+pie(slices, labels=lbls, col=rainbow(length(lbls)))
+data
+counts<-data.frame(data$week, data$user1, data$user2, data$user3)
+rownames(counts)<-counts[,1]
+counts[,1]<-NULL
+final_counts<-t(counts)
+barplot(as.matrix(final_counts), col=c("darkblue", "red", "yellow"))
+?barpot
+?barplot
+barplot(as.matrix(final_counts), col=c("darkblue", "red", "yellow"), legend=colnames(final_counts))
+barplot(as.matrix(final_counts), col=c("darkblue", "red", "yellow"), legend=colnames(c("user1", "user2", "user3")))
+barplot(as.matrix(final_counts), col=c("darkblue", "red", "yellow"), legend=c("user1", "user2", "user3"))
+commit<-data$commits
+commit
+data
+week<-data$week
+norm_commit<-rnorm(commit, mean = mean(commit), sd=1)
+scale(commit, center = TRUE, scale = TRUE)
+zscore_norm<-(norm_commit-mean(norm_commit)/sd(norm_commit))
+df<-data.frame(gp=week, y=zscore_norm)
+?ggploy
+?ggplot
+p<-ggplot(df, aes(gp, y, group=1))+geom_point()+geom_line()
+p+geom_hline(yintercept=-0.5, col="red")
+p<-ggplot(df, aes(gp, y, group=1))+geom_point()+geom_line()
+p+geom_hline(yintercept=-1.5, col="red")
+xlab(week)
+p+geom_hline(yintercept=-0.5, col="red")+labs(x="week")+labs(y=commit z score")
+p+geom_hline(yintercept=-0.5, col="red")+labs(x="week")+labs(y="commit z score")
+p+geom_hline(yintercept=-1.5, col="red")+labs(x="week")+labs(y="commit z score")
+data
+addition<-data$addition#
+norm_addition<-rnorm(addtion, mean=mean(addition), sd=1)#
+scale(addtion, center=TRUE, scale=TRUE)#
+zscore_add_norm<-(norm_addition-mean(norm_addition)/sd(norm_addition))#
+df<-data.frame(wk=week, add=norm_addition)#
+p<-ggplot(df, aes(wk, add, group=1))+geom_point()+geom_line()#
+p+geom_hline(yintercept=-1.5, col="red")+labs(x="week")+labs(y="addition z score")
+addition<-data$addition
+norm_addition<-rnorm(addition, mean=mean(addition), sd=1)
+addition<-data$additions
+addition
+norm_addition<-rnorm(addition, mean=mean(addition), sd=1)
+scale(addtion, center=TRUE, scale=TRUE)
+scale(addition, center=TRUE, scale=TRUE)
+zscore_add_norm<-(norm_addition-mean(norm_addition)/sd(norm_addition))
+df<-data.frame(wk=week, add=norm_addition)
+p<-ggplot(df, aes(wk, add, group=1))+geom_point()+geom_line()
+p+geom_hline(yintercept=-1.5, col="red")+labs(x="week")+labs(y="addition z score")
+norm_addition
+df<-data.frame(wk=week, add=addition)
+df
+p<-ggplot(df, aes(wk, add, group=1))+geom_point()+geom_line()
+p+labs(x="week")+labs(y="addition z score")
+data<-read.csv("SE17GroupH_Zap_issues.csv")
+data
+duration<-data$duration
+duration
+dur50<-sum(duration<50)
+dur50
+dur100M-(duration>=50 && duration<100)
+dur100<-(duration>=50 && duration<100)
+dur100
+dur100<-(duration>=50 & duration<100)
+dur100
+dur100<-sum(duration>=50 & duration<100)
+dur100
+dur0<-sum(duration=0)
+dur0
+duration
+sum(duration=0)
+sum(duration=00)
+sum(duration==0)
+dur1<-sum(duration==1)
+hours<-seq(1,24, by=1)
+hours
+duration<-data$duration#
+dur0<-sum(duration==0)#
+dur1<-sum(duration==1)#
+dur2<-sum(duration==2)#
+dur3<-sum(duration==3)#
+dur4<-sum(duration==4)#
+dur5<-sum(duration==5)#
+dur6<-sum(duration==6)#
+dur7<-sum(duration==7)#
+dur8<-sum(duration==8)#
+dur9<-sum(duration==9)#
+dur10<-sum(duration==10)#
+dur11<-sum(duration==11)#
+dur12<-sum(duration==12)#
+dur13<-sum(duration==13)#
+dur14<-sum(duration==14)#
+dur15<-sum(duration==15)#
+dur16<-sum(duration==16)#
+dur17<-sum(duration==17)#
+dur18<-sum(duration==18)#
+dur19<-sum(duration==19)#
+dur20<-sum(duration==20)#
+dur21<-sum(duration==21)#
+dur22<-sum(duration==22)#
+dur23<-sum(duration==23)#
+dur24<-sum(duration==24)
+issues_24less<-data.frame(hours, c(dur0, dur1, dur2, dur3, dur4, dur5, dur6, dur7, dur8, dur9, dur10, dur11, dur12, dur13, dur14, dur15, dur16, dur17, dur18, dur19, dur20,dur21,dur22,dur23,dur24))
+hours<-seq(0,24, by=1)
+issues_24less<-data.frame(hours, c(dur0, dur1, dur2, dur3, dur4, dur5, dur6, dur7, dur8, dur9, dur10, dur11, dur12, dur13, dur14, dur15, dur16, dur17, dur18, dur19, dur20,dur21,dur22,dur23,dur24))
+issues_24less
+counts<-c(dur0, dur1, dur2, dur3, dur4, dur5, dur6, dur7, dur8, dur9, dur10, dur11, dur12, dur13, dur14, dur15, dur16, dur17, dur18, dur19, dur20,dur21,dur22,dur23,dur24)
+issues_24less<-data.frame(hours, counts)
+issues_24less
+barplot(issues_24less$counts, main="Comments Count for Team1", names.arg=issues_24less$hours)
+data<-read.csv('group2_commit_data.csv')
 commit<-data$commits#
-norm_commit<-rnorm(commit, mean =0, sd=1)#
+week<-data$week#
+norm_commit<-rnorm(commit, mean = mean(commit), sd=1)#
 scale(commit, center = TRUE, scale = TRUE)#
 zscore<-(commit-mean(commit)/sd(commit))#
 zscore_norm<-(norm_commit-mean(norm_commit)/sd(norm_commit))
-data<-read.csv('group1_commit_data.csv')#
+df<-data.frame(gp=week, y=zscore_norm)#
+p<-ggplot(df, aes(gp, y, group=1))+geom_point()+geom_line()#
+p+geom_hline(yintercept=-1.5, col="red")+labs(x="week")+labs(y="commit z score")
+addition<-data$additions#
+norm_addition<-rnorm(addition, mean=mean(addition), sd=1)#
+scale(addition, center=TRUE, scale=TRUE)#
+zscore_add_norm<-(norm_addition-mean(norm_addition)/sd(norm_addition))#
+df<-data.frame(wk=week, add=norm_addition)#
+p<-ggplot(df, aes(wk, add, group=1))+geom_point()+geom_line()#
+p+labs(x="week")+labs(y="addition z score")
+counts<-data.frame(data$week, data$user1, data$user2, data$user3)#
+rownames(counts)<-counts[,1]#
+counts[,1]<-NULL#
+final_counts<-t(counts)#
+barplot(as.matrix(final_counts), col=c("darkblue", "red", "yellow"), legend=c("user1", "user2", "user3"))
+slices<-c(sum(data$user1), sum(data$user2), sum(data$user3))#
+lbls<-c("user1", "user2", "user3")#
+pct=round(slices/sum(slices)*100)#
+lbls<-paste(lbls, pct)#
+lbls<-paste(lbls, "%", sep="")#
+pie(slices, labels=lbls, col=rainbow(length(lbls)))
+data<-read.csv('group4_commit_data.csv')
 commit<-data$commits#
-norm_commit<-rnorm(commit, mean =0, sd=1)#
+week<-data$week#
+norm_commit<-rnorm(commit, mean = mean(commit), sd=1)#
 scale(commit, center = TRUE, scale = TRUE)#
 zscore<-(commit-mean(commit)/sd(commit))#
 zscore_norm<-(norm_commit-mean(norm_commit)/sd(norm_commit))
-x1<-zscore_norm#
-threshold <- -0.5#
-x2<-threshold
-above<-x1>x2
-intersect.points<-which(diff(above)!=0)
-x1.slopes<-x1[intersect.points+1]-x1[intersect.points]#
-x2.slopes<-x2[intersect.points+1]-x2[intersect.points]
-x.points<-intersect.points + ((x2[intersect.points] - x1[intersect.points]) / (x1.slopes-x2.slopes))#
-y.points<-x1[intersect.points] + (x1.slopes*(x.points-intersect.points))
-plot(x1,type='l')#
-lines(x2,type='l',col='red')#
-points(x.points,y.points,col='blue')
-lines(h=-0.5, type="o", col="red", lty = 2)
-adline(h=-0.5, type="o", col="red", lty = 2)
-abline(h=-0.5, type="o", col="red", lty = 2)
-axis(side=1, at=c(1:16))
-intersect.points
-x2.slopes
-points(intersect.points)
-points(intersect.points, type="p", col="red")
-zsocre_norm
-x1
-ypoints
-y.poinys
-y.points
+df<-data.frame(gp=week, y=zscore_norm)#
+p<-ggplot(df, aes(gp, y, group=1))+geom_point()+geom_line()#
+p+geom_hline(yintercept=-1.5, col="red")+labs(x="week")+labs(y="commit z score")
+addition<-data$additions#
+norm_addition<-rnorm(addition, mean=mean(addition), sd=1)#
+scale(addition, center=TRUE, scale=TRUE)#
+zscore_add_norm<-(norm_addition-mean(norm_addition)/sd(norm_addition))#
+df<-data.frame(wk=week, add=norm_addition)#
+p<-ggplot(df, aes(wk, add, group=1))+geom_point()+geom_line()#
+p+labs(x="week")+labs(y="addition z score")
+addition<-data$additions#
+norm_addition<-rnorm(addition, mean=mean(addition), sd=1)#
+scale(addition, center=TRUE, scale=TRUE)#
+zscore_add_norm<-(norm_addition-mean(norm_addition)/sd(norm_addition))#
+df<-data.frame(wk=week, add=norm_addition)#
+p<-ggplot(df, aes(wk, add, group=1))+geom_point()+geom_line()#
+p+labs(x="week")+labs(y="addition")
+addition<-data$additions
+df<-data.frame(wk=week, add=addition)#
+p<-ggplot(df, aes(wk, add, group=1))+geom_point()+geom_line()#
+p+labs(x="week")+labs(y="addition")
+data<-read.csv('group2_commit_data.csv')
+addition<-data$additions
+df<-data.frame(wk=week, add=addition)#
+p<-ggplot(df, aes(wk, add, group=1))+geom_point()+geom_line()#
+p+labs(x="week")+labs(y="addition")
+data<-read.csv('group4_commit_data.csv')
+slices<-c(sum(data$user1), sum(data$user2), sum(data$user3))#
+lbls<-c("user1", "user2", "user3")#
+pct=round(slices/sum(slices)*100)#
+lbls<-paste(lbls, pct)#
+lbls<-paste(lbls, "%", sep="")#
+pie(slices, labels=lbls, col=rainbow(length(lbls)))
+counts<-data.frame(data$week, data$user1, data$user2, data$user3)#
+rownames(counts)<-counts[,1]#
+counts[,1]<-NULL#
+final_counts<-t(counts)#
+barplot(as.matrix(final_counts), col=c("darkblue", "red", "yellow"), legend=c("user1", "user2", "user3"))
+dur50<-sum(duration>24 & duration<50)#
+dur100<-sum(duration>=50 & duration<100)#
+dur150<-sum(duration>=100 & duration<150)#
+dur200<-sum(duration>=150 & duratidon<200)#
+dur250<-sum(duration>=200 & duration<250)#
+dur300<-sum(duration>=250 & duration<300)#
+dur350<-sum(duration>=300 & duration<350)#
+dur400<-sum(duration>=350 & duration<400)#
+dur450<-sum(duration>=400 & duration<450)#
+dur500<-sum(duration>=450 & duration<500)#
+dur550<-sum(duration>=500 & duration<550)#
+dur600<-sum(duration>=550 & duration<600)#
+dur650<-sum(duration>=600 & duration<650)#
+dur700<-sum(duration>=650 & duration<700)#
+dur750<-sum(duration>=700 & duration<750)#
+dur800<-sum(duration>=750 & duration<800)#
+dur850<-sum(duration>=800 & duration<850)#
+dur900<-sum(duration>=850 & duration<900)#
+dur850<-sum(duration>=900 & duration<950)#
+dur1000<-sum(duration>=950 & duration<1000)#
+dur1050<-sum(duration>=1000 & duration<1050)#
+dur1100<-sum(duration>=1050 & duration<1100)#
+dur1150<-sum(duration>=1100 & duration<1150)#
+dur1200<-sum(duration>=1150 & duration<1200)#
+dur1200plus<-sum(duration>=1200)#
+counts<-c(dur50, dur100, dur150, dur200, dur250, dur300, dur350, dur400, dur450, dur500, dur550, dur600, dur650, dur700, dur750, dur800, dur850, dur900, dur950, dur1000, dur1050, dur1100, dur1150, dur1200, dur1200plus)#
+names<-c("24-49", "50-99", "100-149", "150-199", "200-249", "250-299", "300-349", "350-399", "400-449", "450-499", "500-549", "550-599", "600-649", "650-699", "700-749", "750-799", "800-849", "850-899", "900-949", "950-999","1000-1049", "1050-1099","1100-1149","1150-1199","1200+")#
+issus_24plus<-data.frame(names, counts)
+dur50<-sum(duration>24 & duration<50)#
+dur100<-sum(duration>=50 & duration<100)#
+dur150<-sum(duration>=100 & duration<150)#
+dur200<-sum(duration>=150 & duration<200)#
+dur250<-sum(duration>=200 & duration<250)#
+dur300<-sum(duration>=250 & duration<300)#
+dur350<-sum(duration>=300 & duration<350)#
+dur400<-sum(duration>=350 & duration<400)#
+dur450<-sum(duration>=400 & duration<450)#
+dur500<-sum(duration>=450 & duration<500)#
+dur550<-sum(duration>=500 & duration<550)#
+dur600<-sum(duration>=550 & duration<600)#
+dur650<-sum(duration>=600 & duration<650)#
+dur700<-sum(duration>=650 & duration<700)#
+dur750<-sum(duration>=700 & duration<750)#
+dur800<-sum(duration>=750 & duration<800)#
+dur850<-sum(duration>=800 & duration<850)#
+dur900<-sum(duration>=850 & duration<900)#
+dur850<-sum(duration>=900 & duration<950)#
+dur1000<-sum(duration>=950 & duration<1000)#
+dur1050<-sum(duration>=1000 & duration<1050)#
+dur1100<-sum(duration>=1050 & duration<1100)#
+dur1150<-sum(duration>=1100 & duration<1150)#
+dur1200<-sum(duration>=1150 & duration<1200)#
+dur1200plus<-sum(duration>=1200)#
+counts<-c(dur50, dur100, dur150, dur200, dur250, dur300, dur350, dur400, dur450, dur500, dur550, dur600, dur650, dur700, dur750, dur800, dur850, dur900, dur950, dur1000, dur1050, dur1100, dur1150, dur1200, dur1200plus)#
+names<-c("24-49", "50-99", "100-149", "150-199", "200-249", "250-299", "300-349", "350-399", "400-449", "450-499", "500-549", "550-599", "600-649", "650-699", "700-749", "750-799", "800-849", "850-899", "900-949", "950-999","1000-1049", "1050-1099","1100-1149","1150-1199","1200+")#
+issus_24plus<-data.frame(names, counts)
+dur50<-sum(duration>24 & duration<50)#
+dur100<-sum(duration>=50 & duration<100)#
+dur150<-sum(duration>=100 & duration<150)#
+dur200<-sum(duration>=150 & duration<200)#
+dur250<-sum(duration>=200 & duration<250)#
+dur300<-sum(duration>=250 & duration<300)#
+dur350<-sum(duration>=300 & duration<350)#
+dur400<-sum(duration>=350 & duration<400)#
+dur450<-sum(duration>=400 & duration<450)#
+dur500<-sum(duration>=450 & duration<500)#
+dur550<-sum(duration>=500 & duration<550)#
+dur600<-sum(duration>=550 & duration<600)#
+dur650<-sum(duration>=600 & duration<650)#
+dur700<-sum(duration>=650 & duration<700)#
+dur750<-sum(duration>=700 & duration<750)#
+dur800<-sum(duration>=750 & duration<800)#
+dur850<-sum(duration>=800 & duration<850)#
+dur900<-sum(duration>=850 & duration<900)#
+dur950<-sum(duration>=900 & duration<950)#
+dur1000<-sum(duration>=950 & duration<1000)#
+dur1050<-sum(duration>=1000 & duration<1050)#
+dur1100<-sum(duration>=1050 & duration<1100)#
+dur1150<-sum(duration>=1100 & duration<1150)#
+dur1200<-sum(duration>=1150 & duration<1200)#
+dur1200plus<-sum(duration>=1200)#
+counts<-c(dur50, dur100, dur150, dur200, dur250, dur300, dur350, dur400, dur450, dur500, dur550, dur600, dur650, dur700, dur750, dur800, dur850, dur900, dur950, dur1000, dur1050, dur1100, dur1150, dur1200, dur1200plus)#
+names<-c("24-49", "50-99", "100-149", "150-199", "200-249", "250-299", "300-349", "350-399", "400-449", "450-499", "500-549", "550-599", "600-649", "650-699", "700-749", "750-799", "800-849", "850-899", "900-949", "950-999","1000-1049", "1050-1099","1100-1149","1150-1199","1200+")#
+issus_24plus<-data.frame(names, counts)
+barplot(issues_24plus$counts, main="Issues closed less than 24 hours for Team1", names.arg=issues_24plus$names)
+issues_24plus<-data.frame(names, counts)
+barplot(issues_24plus$counts, main="Issues closed more than 24 hours for Team1", names.arg=issues_24plus$names)
+install.library(gridBase)
+library.install(gridBase)
+library(gridBase)
+midpts<-barplot(issues_24plus$counts, main="Issues closed more than 24 hours for Team1", names.arg="")
+vps<-baseViewports()
+pushVIewPorts(vps$inner,vps$figure,vps$plot)
+pushVIewports(vps$inner,vps$figure,vps$plot)
+pushViewports(vps$inner,vps$figure,vps$plot)
+vps <- baseViewports()#
+pushViewport(vps$inner, vps$figure, vps$plot)
+barplot(issues_24plus$counts, main="Issues closed more than 24 hours for Team1", names.arg=issues_24plus$names)
+text(x=midpts, y=-2, names(DD), cex=0.8, srt=45, xpd=TRUE)
+text(x=midpts, y=-2, names(issues_24plus$names), cex=0.8, srt=45, xpd=TRUE)
+barplot(issues_24plus$counts, main="Issues closed more than 24 hours for Team1", names.arg=issues_24plus$names, las=2)
+assignee<-data$assignee
+counts<-table(assignee)
+counts
+table(assignee)
+assignee
+data
+data<-read.csv("SE17GroupH_Zap_issues.csv")
+assignee<-data$assignee
+assignee
+counts<-table(assignee)
+counts
+plot(counts)
+plot(counts, las=2)
+plot(counts, las=1)
+3
+plot(counts, las=3)
+g<-ggplot(counts)
+g<-ggplot(counts, aes(class))
+counts<-table(assignee, row.names(c("assignee", "counts")))
+counts<-table(assignee, row.names("assignee", "counts"))
+counts<-table(assignee, row.names("assignee", "issues"))
+counts_table<-as.data.frame.matrix(counts)
+ordered_counts<-sort(counts)
+ordered_counts
+barplot(counts, main="Issues assigned to team members")
+barplot(counts, main="Issues assigned to team members", las=2)
+barplot(ordered_counts, main="Issues assigned to team members", las=2)
+text(x=midpts, y=-2, names(ordered_counts), cex=0.8, srt=45, xpd=TRUE)
+barplot(ordered_counts, main="Issues assigned to team members", names.arg="")
+text(x=midpts, y=-2, names(ordered_counts), cex=0.8, srt=45, xpd=TRUE)
+created_by<-data$created_by#
+counts<-table(created_by)#
+ordered_counts<-sort(created_by)#
+barplot(ordered_counts, main="Issues created by team members")
+created_by
+counts
+ordered_counts
+ordered_counts<-sort(counts)
+ordered_counts
+barplot(ordered_counts, main="Issues created by team members")
+data<-read.csv('group1_commit_data.csv')
+data<-read.csv('group2_commit_data.csv')
+addition<-data$additions
+df<-data.frame(wk=week, add=addition)#
+p<-ggplot(df, aes(wk, add, group=1))+geom_point()+geom_line()#
+p+labs(x="week")+labs(y="addition")
+data<-read.csv('group4_commit_data.csv')
+addition<-data$additions
+df<-data.frame(wk=week, add=addition)#
+p<-ggplot(df, aes(wk, add, group=1))+geom_point()+geom_line()#
+p+labs(x="week")+labs(y="addition")
