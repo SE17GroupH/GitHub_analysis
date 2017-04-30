@@ -153,6 +153,21 @@ pie(slices,labels = lbls, col=rainbow(length(lbls)), main="Issues without commen
 
 
 
+#pie charts for commit and loc
+data<-read.csv("teamH.csv")
+slices<-data$commits
+lbls <- c("user1", "user2", "user3")
+pct <- round(slices/sum(slices)*100)
+lbls <- paste(lbls, pct) # add percents to labels 
+lbls <- paste(lbls,"%",sep="") # ad % to labels 
+pie(slices,labels = lbls, col=rainbow(length(lbls)), main="Percentage of commits per member")
+
+slices<-data$loc
+lbls <- c("user1", "user2", "user3")
+pct <- round(slices/sum(slices)*100)
+lbls <- paste(lbls, pct) # add percents to labels 
+lbls <- paste(lbls,"%",sep="") # ad % to labels 
+pie(slices,labels = lbls, col=rainbow(length(lbls)), main="Percentage of lines of codes assigned per member")
 
 
 
