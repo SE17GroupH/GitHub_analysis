@@ -25,3 +25,14 @@ closed_at<-data$closed_at
 closed_dates<-strftime(closed_at, format="%W")
 closed_counts<-table(closed_dates)
 barplot(closed_counts, main="Issues closed", xlab="week")
+
+#issues duration
+duration<-data$duration
+less24<-sum(duration<=24)
+more24<-sum(duration>24)
+duration_table<-matrix(c(less24, more24), ncol=2, byrow=TRUE)
+colnames(duration_table)<-c("less than 24hrs", "more than 24hrs")
+rownames(duration_table)<-c("counts")
+duration_table<-as.table(duration_table)
+mp<-barplot(duration_table, main="Issue open time")
+text(mp, c(less24, more24), labels = c(less24, more24), pos = 1, col="white")
