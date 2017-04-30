@@ -36,3 +36,10 @@ rownames(duration_table)<-c("counts")
 duration_table<-as.table(duration_table)
 mp<-barplot(duration_table, main="Issue open time")
 text(mp, c(less24, more24), labels = c(less24, more24), pos = 1, col="white")
+
+## for group 3
+remove<-c("None")
+remove_none<-setdiff(duration, remove)
+less24<-sum(remove_none<=24)
+more24<-sum(remove_none>24)
+
