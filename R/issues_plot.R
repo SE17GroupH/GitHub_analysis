@@ -137,6 +137,23 @@ sum(resi >= 0)
 text(1, labels="below is"+below, pos=1, offset=0.5)
 
 
+#create pie charts for issues without comments
+comments<-data$comments
+pull_request<-data$pull_request
+df<-data.frame(comments, pull_request)
+subset_df<-df[which(df$pull_request=="No"),]
+no_comments<-sum(subset_df$comments==0)
+have_comments<-length(subset_df$comments)-no_comments
+slices <- c(no_comments, have_comments)
+lbls <- c("without comments", "have comments")
+pct <- round(slices/sum(slices)*100)
+lbls <- paste(lbls, pct) # add percents to labels 
+lbls <- paste(lbls,"%",sep="") # ad % to labels 
+pie(slices,labels = lbls, col=rainbow(length(lbls)), main="Issues without comments vs Issues have comments")
+
+
+
+
 
 
 
