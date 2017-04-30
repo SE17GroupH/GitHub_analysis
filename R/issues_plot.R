@@ -27,7 +27,8 @@ closed_counts<-table(closed_dates)
 barplot(closed_counts, main="Issues closed", xlab="week")
 
 #issues duration
-duration<-data$duration
+subset<-data[which(data$pull_request=="No"),]
+duration<-subset$duration
 less24<-sum(duration<=24)
 more24<-sum(duration>24)
 duration_table<-matrix(c(less24, more24), ncol=2, byrow=TRUE)

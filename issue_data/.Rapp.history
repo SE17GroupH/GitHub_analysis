@@ -1,0 +1,540 @@
+install.packages("ggvis")
+library("ggvis")
+search()
+X <- matrix(c(1,2,3,4), nrow =4, ncol =1)#
+Y <- matrix(c(9,6,4,1), nrow =4, ncol =1)#
+calCovariance <- function(x, y){#
+		matrix11 <- sum((x - mean(x)) * (x - mean(x)))/(length(x)-1)#
+		matrix12 <- sum((x - mean(x)) * (y - mean(y)))/(length(x)-1)#
+		matrix21 <- sum((y - mean(y)) * (x - mean(x)))/(length(x)-1)#
+		matrix22 <- sum((y - mean(y)) * (x - mean(x)))/(length(x)-1)#
+		return (matrix(c(matrix11, matrix12, matrix21, matrix22), nrow =2, ncol =2))}#
+cov(cbind(X,Y))#
+calCovariance(X,Y)=cov(cbind(X,Y))
+X <- matrix(c(1,2,3,4), nrow =4, ncol =1)#
+Y <- matrix(c(9,6,4,1), nrow =4, ncol =1)#
+calCovariance <- function(x, y){#
+		matrix11 <- sum((x - mean(x)) * (x - mean(x)))/(length(x)-1)#
+		matrix12 <- sum((x - mean(x)) * (y - mean(y)))/(length(x)-1)#
+		matrix21 <- sum((y - mean(y)) * (x - mean(x)))/(length(x)-1)#
+		matrix22 <- sum((y - mean(y)) * (x - mean(x)))/(length(x)-1)#
+		return (matrix(c(matrix11, matrix12, matrix21, matrix22), nrow =2, ncol =2))}#
+cov(cbind(X,Y))#
+calCovariance(X,Y)
+calCovariance(X,Y)=cov(cbind(X,Y))
+clear
+X <- matrix(c(1,2,3,4), nrow =4, ncol =1)#
+Y <- matrix(c(9,6,4,1), nrow =4, ncol =1)#
+calCovariance <- function(x, y){#
+		matrix11 <- sum((x - mean(x)) * (x - mean(x)))/(length(x)-1)#
+		matrix12 <- sum((x - mean(x)) * (y - mean(y)))/(length(x)-1)#
+		matrix21 <- sum((y - mean(y)) * (x - mean(x)))/(length(x)-1)#
+		matrix22 <- sum((y - mean(y)) * (x - mean(x)))/(length(x)-1)#
+		return (matrix(c(matrix11, matrix12, matrix21, matrix22), nrow =2, ncol =2))}#
+cov(cbind(X,Y))#
+calCovariance(X,Y)==cov(cbind(X,Y))
+X <- matrix(c(1,2,3,4), nrow =4, ncol =1)#
+Y <- matrix(c(9,6,4,1), nrow =4, ncol =1)#
+calCovariance <- function(x, y){#
+		matrix11 <- sum((x - mean(x)) * (x - mean(x)))/(length(x)-1)#
+		matrix12 <- sum((x - mean(x)) * (y - mean(y)))/(length(x)-1)#
+		matrix21 <- sum((y - mean(y)) * (x - mean(x)))/(length(x)-1)#
+		matrix22 <- sum((y - mean(y)) * (y - mean(y)))/(length(y)-1)#
+		return (matrix(c(matrix11, matrix12, matrix21, matrix22), nrow =2, ncol =2))}#
+cov(cbind(X,Y))#
+calCovariance(X,Y)==cov(cbind(X,Y))
+mean((X^2)) == ((mean(X))^2 + (sd(X))^2)
+message("Verifying equation")#
+sigmaSquare = sum((X-mean(X))*(X-mean(X)))/4#
+if(mean(X^2) == mean(X)^2+ sigmaSquare)#
+    cat("Equation verified!")
+message(”Verifying equation”)#
+sigmaSquare = sum((X−mean(X))*(X−mean(X)))/4 if(mean(Xˆ2) == mean(X)ˆ2+ sigmaSquare)#
+cat(”Equation verified !”)
+message(”Verifying equation”)#
+sigmaSquare = sum((X-mean(X))*(X-mean(X)))/4#
+if(mean(X^2) == mean(X)^2+ sigmaSquare)#
+cat("Equation verified!")
+message("Verifying equation")#
+sigmaSquare = sum((X-mean(X))*(X-mean(X)))/4#
+if(mean(X^2) == mean(X)^2+ sigmaSquare)#
+cat("Equation verified!")
+data<-issue.read("Group0_issues.csv")
+data<-read.csv("Group0_issues.csv")
+data
+open_counts<-table(data$created_at)
+open_counts
+?strptime
+data<-read.csv("Group0_issues.csv")
+created_at<-data$created_atr
+created_at<-data$created_at
+open_dates<-strftime(created_at, format="%a %b %e")
+open_dates
+open_dates<-strftime(created_at, format="%F")
+open_dates
+open_counts<-table(open_dates)
+open_counts
+barplot(open_counts, main="Issues opened")
+barplot(open_counts, main="Issues opened", names.arg="")
+text(x=midpts, y=-2, names(ordered_counts), cex=0.8, srt=45, xpd=TRUE)
+text(x=midpts, y=-2, names(open_counts), cex=0.8, srt=45, xpd=TRUE)
+text(x=midpts, y=-2, names(open_counts), cex=0.8, srt=45, xpd=TRUE)
+barplot(open_counts, main="Issues opened", names.arg="")
+text(x=midpts, y=-2, names(open_counts), cex=0.8, srt=45, xpd=TRUE)
+barplot(open_counts, main="Issues opened", lax=2)
+?barplot
+open_dates<-strftime(created_at, format="%W")
+open_dates
+open_counts<-table(open_dates)
+barplot(open_counts, main="Issues opened")
+barplot(open_counts, main="Issues opened")
+?barplot
+barplot(open_counts, main="Issues opened", names.arg=c(1:7), xlab="week")
+closed_at<-data$closed_at#
+closed_dates<-strftime(closed_at, format="%W")#
+closed_counts<-table(closed_at)#
+barplot(closed_counts, main="Issues closed", names.arg=c(1:7), xlab="week")
+closed_at<-data$closed_at#
+closed_dates<-strftime(closed_at, format="%W")#
+closed_counts<-table(closed_at)
+closed_counts
+closed_counts<-table(closed_dates).
+closed_counts<-table(closed_dates)
+closed_counts
+barplot(closed_counts, main="Issues closed", xlab="week")
+barplot(open_counts, main="Issues opened", xlab="week")
+data<-read.csv("Group1_issues.csv")
+created_at<-data$created_at#
+open_dates<-strftime(created_at, format="%W")#
+open_counts<-table(open_dates)#
+barplot(open_counts, main="Issues opened", xlab="week")
+closed_at<-data$closed_at#
+closed_dates<-strftime(closed_at, format="%W")#
+closed_counts<-table(closed_dates)#
+barplot(closed_counts, main="Issues closed", xlab="week")
+data<-read.csv("Group2_issues.csv")
+created_at<-data$created_at#
+open_dates<-strftime(created_at, format="%W")#
+open_counts<-table(open_dates)#
+barplot(open_counts, main="Issues opened", xlab="week")
+closed_at<-data$closed_at#
+closed_dates<-strftime(closed_at, format="%W")#
+closed_counts<-table(closed_dates)#
+barplot(closed_counts, main="Issues closed", xlab="week")
+data<-read.csv("Group1_issues.csv")
+created_at<-data$created_at#
+open_dates<-strftime(created_at, format="%W")#
+open_counts<-table(open_dates)#
+barplot(open_counts, main="Issues opened", xlab="week")
+data<-read.csv("Group3_issues.csv")
+created_at<-data$created_at#
+open_dates<-strftime(created_at, format="%W")#
+open_counts<-table(open_dates)#
+barplot(open_counts, main="Issues opened", xlab="week")
+closed_at<-data$closed_at#
+closed_dates<-strftime(closed_at, format="%W")#
+closed_counts<-table(closed_dates)#
+barplot(closed_counts, main="Issues closed", xlab="week")
+data<-read.csv("Group0_issues.csv")
+duration<-data$duration
+24less<-sum(duration<=24)
+less24<-sum(duration<=24)
+more24<-sum(duration>24)
+xaxis<-c("less than 24hrs", "more than 24hrs")
+df<-data.frame(xaxis, c(less24, more24))
+df
+barplot(df, main="Issue open time")
+barplot(as.matrix(df), main="Issue open time")
+df<-data.frame(c("less than 24hrs", "more than 24hrs"), c(less24, more24))
+barplot(as.matrix(df), main="Issue open time")
+duration_table<-matrix(c(less24, more24), ncol=1, byrow=TRUE)
+colname(duration_table)<-c("counts")
+colnames(duration_table)<-c("counts")
+rownames(duration_table)<-c("less than 24hrs", "more than 24hrs")
+duration_table<-as.table(duration_table)
+duration_table
+barplot(duration_table, main="Issue open time")
+duration_table<-matrix(c(less24, more24), ncol=2, byrow=TRUE)
+colnames(duration_table)<-c("less than 24hrs", "more than 24hrs")
+rownames(duration_table)<-c("counts")
+duration_table<-as.table(duration_table)
+barplot(duration_table, main="Issue open time")
+mp<-barplot(duration_table, main="Issue open time")
+text(mp, c(less24, more24), labels = c(less24, more24), pos = 3)
+text(mp, c(less24, more24), labels = c(less24, more24), pos = 3, col="red")
+text(mp, c(less24, more24), labels = c(less24, more24), pos = 12)
+text(mp, c(less24, more24), labels = c(less24, more24), pos = 1)
+mp<-barplot(duration_table, main="Issue open time")
+text(mp, c(less24, more24), labels = c(less24, more24), pos = 1, col="red")
+white
+text(mp, c(less24, more24), labels = c(less24, more24), pos = 1, col="white")
+mp<-barplot(duration_table, main="Issue open time")
+text(mp, c(less24, more24), labels = c(less24, more24), pos = 1, col="white")
+data<-read.csv("Group1_issues.csv")
+duration<-data$duration#
+less24<-sum(duration<=24)#
+more24<-sum(duration>24)#
+duration_table<-matrix(c(less24, more24), ncol=2, byrow=TRUE)#
+colnames(duration_table)<-c("less than 24hrs", "more than 24hrs")#
+rownames(duration_table)<-c("counts")#
+duration_table<-as.table(duration_table)#
+mp<-barplot(duration_table, main="Issue open time")#
+text(mp, c(less24, more24), labels = c(less24, more24), pos = 1, col="white")
+data<-read.csv("Group2_issues.csv")
+duration<-data$duration#
+less24<-sum(duration<=24)#
+more24<-sum(duration>24)#
+duration_table<-matrix(c(less24, more24), ncol=2, byrow=TRUE)#
+colnames(duration_table)<-c("less than 24hrs", "more than 24hrs")#
+rownames(duration_table)<-c("counts")#
+duration_table<-as.table(duration_table)#
+mp<-barplot(duration_table, main="Issue open time")#
+text(mp, c(less24, more24), labels = c(less24, more24), pos = 1, col="white")
+data<-read.csv("Group3_issues.csv")
+duration<-data$duration#
+less24<-sum(duration<=24)#
+more24<-sum(duration>24)#
+duration_table<-matrix(c(less24, more24), ncol=2, byrow=TRUE)#
+colnames(duration_table)<-c("less than 24hrs", "more than 24hrs")#
+rownames(duration_table)<-c("counts")#
+duration_table<-as.table(duration_table)#
+mp<-barplot(duration_table, main="Issue open time")#
+text(mp, c(less24, more24), labels = c(less24, more24), pos = 1, col="white")
+data<-read.csv("Group3_issues.csv")
+data
+duration<-data$duration
+less24<-sum(duration<=24)
+duration
+duration[-c""]
+duration[-c("None")]
+duration[-c("None"),]
+remove<-c("None")
+duration %in% remove
+duration[!duration %in% remove]
+duration[! duration %in% remove]
+remove_none<-duration[! duration %in% remove]
+remove_none
+less24<-sum(remove_none<=24)
+setdiff(duration, remove)
+remove_none<-setdiff(duration, remove)
+less24<-sum(remove_none<=24)
+less24
+more24<-sum(duration>24)
+more24<-sum(remove_none>24)
+duration_table<-matrix(c(less24, more24), ncol=2, byrow=TRUE)#
+colnames(duration_table)<-c("less than 24hrs", "more than 24hrs")#
+rownames(duration_table)<-c("counts")#
+duration_table<-as.table(duration_table)#
+mp<-barplot(duration_table, main="Issue open time")#
+text(mp, c(less24, more24), labels = c(less24, more24), pos = 1, col="white")
+data<-read.csv("Group0_issues.csv")
+comments<-data$comments
+comment0<-sum(comments == 0)
+comments5<-sum(comments>0 & comments<=5)
+comments10<-sum(comments>5 & comments<=10)
+comments15<-sum(comments>10 & comments<=15)
+comments20<-sum(comments>15 & comments<=20)
+comments20plus<-sum(comments>20)
+comments_table<-matrix(c(comments0, comments5, comments10, comments15, comments20, comments20plus), ncol=6, byrow=TRUE)
+comments_table<-matrix(c(comment0, comments5, comments10, comments15, comments20, comments20plus), ncol=6, byrow=TRUE)
+colnames(duration_table)<-c("0", "1-5", "6-10", "11-15", "16-20", "20+")
+colnames(comments_table)<-c("0", "1-5", "6-10", "11-15", "16-20", "20+")
+rownames(comments_table)<-c("counts")
+comments_table<-as.table(comments_table)
+comments_table
+mp<-barplot(duration_table, main="Comments count", xlab="Number of comments per issue")
+mp<-barplot(comments_table, main="Comments count", xlab="Number of comments per issue")
+text(mp, c(comments0, comments5, comments10, comments15, comments20, comments20plus), labels = c(comments0, comments5, comments10, comments15, comments20, comments20plus), pos = 1, col="white")
+text(mp, c(comments0, comments5, comments10, comments15, comments20, comments20plus), labels = c(comment0, comments5, comments10, comments15, comments20, comments20plus), pos = 1, col="white")
+text(mp, c(comment0, comments5, comments10, comments15, comments20, comments20plus), labels = c(comment0, comments5, comments10, comments15, comments20, comments20plus), pos = 1, col="white")
+data<-read.csv("Group1_issues.csv")
+comments<-data$comments#
+comment0<-sum(comments == 0)#
+comments5<-sum(comments>0 & comments<=5)#
+comments10<-sum(comments>5 & comments<=10)#
+comments15<-sum(comments>10 & comments<=15)#
+comments20<-sum(comments>15 & comments<=20)#
+comments20plus<-sum(comments>20)#
+comments_table<-matrix(c(comment0, comments5, comments10, comments15, comments20, comments20plus), ncol=6, byrow=TRUE)#
+colnames(comments_table)<-c("0", "1-5", "6-10", "11-15", "16-20", "20+")#
+rownames(comments_table)<-c("counts")#
+comments_table<-as.table(comments_table)#
+mp<-barplot(comments_table, main="Comments count", xlab="Number of comments per issue")#
+text(mp, c(comment0, comments5, comments10, comments15, comments20, comments20plus), labels = c(comment0, comments5, comments10, comments15, comments20, comments20plus), pos = 1, col="white")
+data<-read.csv("Group0_issues.csv")
+comments<-data$comments#
+comment0<-sum(comments == 0)#
+comments5<-sum(comments>0 & comments<=5)#
+comments10<-sum(comments>5 & comments<=10)#
+comments15<-sum(comments>10 & comments<=15)#
+comments20<-sum(comments>15 & comments<=20)#
+comments20plus<-sum(comments>20)#
+comments_table<-matrix(c(comment0, comments5, comments10, comments15, comments20, comments20plus), ncol=6, byrow=TRUE)#
+colnames(comments_table)<-c("0", "1-5", "6-10", "11-15", "16-20", "20+")#
+rownames(comments_table)<-c("counts")#
+comments_table<-as.table(comments_table)#
+mp<-barplot(comments_table, main="Comments count", xlab="Number of comments per issue")#
+text(mp, c(comment0, comments5, comments10, comments15, comments20, comments20plus), labels = c(comment0, comments5, comments10, comments15, comments20, comments20plus), pos = 1, col="white")
+data<-read.csv("Group2_issues.csv")
+comments<-data$comments#
+comment0<-sum(comments == 0)#
+comments5<-sum(comments>0 & comments<=5)#
+comments10<-sum(comments>5 & comments<=10)#
+comments15<-sum(comments>10 & comments<=15)#
+comments20<-sum(comments>15 & comments<=20)#
+comments20plus<-sum(comments>20)#
+comments_table<-matrix(c(comment0, comments5, comments10, comments15, comments20, comments20plus), ncol=6, byrow=TRUE)#
+colnames(comments_table)<-c("0", "1-5", "6-10", "11-15", "16-20", "20+")#
+rownames(comments_table)<-c("counts")#
+comments_table<-as.table(comments_table)#
+mp<-barplot(comments_table, main="Comments count", xlab="Number of comments per issue")#
+text(mp, c(comment0, comments5, comments10, comments15, comments20, comments20plus), labels = c(comment0, comments5, comments10, comments15, comments20, comments20plus), pos = 1, col="white")
+data<-read.csv("Group3_issues.csv")
+comments<-data$comments#
+comment0<-sum(comments == 0)#
+comments5<-sum(comments>0 & comments<=5)#
+comments10<-sum(comments>5 & comments<=10)#
+comments15<-sum(comments>10 & comments<=15)#
+comments20<-sum(comments>15 & comments<=20)#
+comments20plus<-sum(comments>20)#
+comments_table<-matrix(c(comment0, comments5, comments10, comments15, comments20, comments20plus), ncol=6, byrow=TRUE)#
+colnames(comments_table)<-c("0", "1-5", "6-10", "11-15", "16-20", "20+")#
+rownames(comments_table)<-c("counts")#
+comments_table<-as.table(comments_table)#
+mp<-barplot(comments_table, main="Comments count", xlab="Number of comments per issue")#
+text(mp, c(comment0, comments5, comments10, comments15, comments20, comments20plus), labels = c(comment0, comments5, comments10, comments15, comments20, comments20plus), pos = 1, col="white")
+data<-read.csv("Group0_issues.csv")
+buglabel<-data$bug
+bugtrue<-sum(buglabel=="TRUE")
+bugtrue
+buglabel
+bugtrue<-sum(buglabel==True)
+bugtrue<-sum(buglabel=="True")
+bugtrue
+bugfalse<-sum(buglabel=="False")
+bugfalse
+slices <- c(bugtrue, bugfalse)
+lbls <- c("bug label", "non bug label")
+lbls <- c("bug label", "non bug labels")
+pct <- round(slices/sum(slices)*100)
+lbls <- paste(lbls, pct)
+lbls <- paste(lbls,"%",sep="")
+pie(slices,labels = lbls, col=rainbow(length(lbls)), main="Bug label vs non bug labels")
+data<-read.csv("Group1_issues.csv")
+buglabel<-data$bug#
+bugtrue<-sum(buglabel=="True")#
+bugfalse<-sum(buglabel=="False")#
+slices <- c(bugtrue, bugfalse) #
+lbls <- c("bug label", "non bug labels")#
+pct <- round(slices/sum(slices)*100)#
+lbls <- paste(lbls, pct) # add percents to labels #
+lbls <- paste(lbls,"%",sep="") # ad % to labels #
+pie(slices,labels = lbls, col=rainbow(length(lbls)), main="Bug label vs non bug labels")
+data<-read.csv("Group2_issues.csv")
+buglabel<-data$bug#
+bugtrue<-sum(buglabel=="True")#
+bugfalse<-sum(buglabel=="False")#
+slices <- c(bugtrue, bugfalse) #
+lbls <- c("bug label", "non bug labels")#
+pct <- round(slices/sum(slices)*100)#
+lbls <- paste(lbls, pct) # add percents to labels #
+lbls <- paste(lbls,"%",sep="") # ad % to labels #
+pie(slices,labels = lbls, col=rainbow(length(lbls)), main="Bug label vs non bug labels")
+data<-read.csv("Group3_issues.csv")
+buglabel<-data$bug#
+bugtrue<-sum(buglabel=="True")#
+bugfalse<-sum(buglabel=="False")#
+slices <- c(bugtrue, bugfalse) #
+lbls <- c("bug label", "non bug labels")#
+pct <- round(slices/sum(slices)*100)#
+lbls <- paste(lbls, pct) # add percents to labels #
+lbls <- paste(lbls,"%",sep="") # ad % to labels #
+pie(slices,labels = lbls, col=rainbow(length(lbls)), main="Bug label vs non bug labels")
+data<-read.csv("Group0_issues.csv")#
+created_by<-data$created_by#
+user1<-sum(created_by=="user1")#
+user2<-sum(created_by=="user2")#
+user3<-sum(created_by=="user3")#
+user4<-sum(created_by=="user4")#
+slices <- c(user1, user2, user3. user4)#
+lbls <- c("user1", "user2", "user3", "user4")#
+pct <- round(slices/sum(slices)*100)#
+lbls <- paste(lbls, pct) # add percents to labels #
+lbls <- paste(lbls,"%",sep="") # ad % to labels #
+pie(slices,labels = lbls, col=rainbow(length(lbls)), main="Percentage of issues created per member")
+data<-read.csv("Group0_issues.csv")#
+created_by<-data$created_by#
+user1<-sum(created_by=="user1")#
+user2<-sum(created_by=="user2")#
+user3<-sum(created_by=="user3")#
+user4<-sum(created_by=="user4")#
+slices <- c(user1, user2, user3, user4)#
+lbls <- c("user1", "user2", "user3", "user4")#
+pct <- round(slices/sum(slices)*100)#
+lbls <- paste(lbls, pct) # add percents to labels #
+lbls <- paste(lbls,"%",sep="") # ad % to labels #
+pie(slices,labels = lbls, col=rainbow(length(lbls)), main="Percentage of issues created per member")
+data<-read.csv("Group1_issues.csv")#
+created_by<-data$created_by#
+user1<-sum(created_by=="user1")#
+user2<-sum(created_by=="user2")#
+user3<-sum(created_by=="user3")#
+user4<-sum(created_by=="user4")#
+slices <- c(user1, user2, user3, user4)#
+lbls <- c("user1", "user2", "user3", "user4")#
+pct <- round(slices/sum(slices)*100)#
+lbls <- paste(lbls, pct) # add percents to labels #
+lbls <- paste(lbls,"%",sep="") # ad % to labels #
+pie(slices,labels = lbls, col=rainbow(length(lbls)), main="Percentage of issues created per member")
+data<-read.csv("Group1_issues.csv")
+created_by<-data$created_by#
+user1<-sum(created_by=="user1")#
+user2<-sum(created_by=="user2")#
+user3<-sum(created_by=="user3")
+slices <- c(user1, user2, user3)
+lbls <- c("user1", "user2", "user3")
+pct <- round(slices/sum(slices)*100)
+lbls <- paste(lbls, pct) # add percents to labels #
+lbls <- paste(lbls,"%",sep="") # ad % to labels #
+pie(slices,labels = lbls, col=rainbow(length(lbls)), main="Percentage of issues created per member")
+data<-read.csv("Group2_issues.csv")
+created_by<-data$created_by#
+user1<-sum(created_by=="user1")#
+user2<-sum(created_by=="user2")#
+user3<-sum(created_by=="user3")#
+user4<-sum(created_by=="user4")
+user4
+slices <- c(user1, user2, user3, user4)#
+lbls <- c("user1", "user2", "user3", "user4")#
+pct <- round(slices/sum(slices)*100)#
+lbls <- paste(lbls, pct) # add percents to labels #
+lbls <- paste(lbls,"%",sep="") # ad % to labels #
+pie(slices,labels = lbls, col=rainbow(length(lbls)), main="Percentage of issues created per member")
+data<-read.csv("Group2_issues.csv")
+created_by<-data$created_by#
+user1<-sum(created_by=="user1")#
+user2<-sum(created_by=="user2")#
+user3<-sum(created_by=="user3")#
+user4<-sum(created_by=="user4")
+user4
+data<-read.csv("Group3_issues.csv")
+created_by<-data$created_by#
+user1<-sum(created_by=="user1")#
+user2<-sum(created_by=="user2")#
+user3<-sum(created_by=="user3")#
+user4<-sum(created_by=="user4")
+user4
+user5<-sum(created_by=="user5")
+user5
+slices <- c(user1, user2, user3, user4, user5)
+lbls <- c("user1", "user2", "user3", "user4", "user5")
+pct <- round(slices/sum(slices)*100)#
+lbls <- paste(lbls, pct) # add percents to labels #
+lbls <- paste(lbls,"%",sep="") # ad % to labels #
+pie(slices,labels = lbls, col=rainbow(length(lbls)), main="Percentage of issues created per member")
+data<-read.csv("Group0_issues.csv")
+data<-read.csv("Group2_issues.csv")
+created_by<-data$created_by#
+user1<-sum(created_by=="user1")#
+user2<-sum(created_by=="user2")#
+user3<-sum(created_by=="user3")#
+user4<-sum(created_by=="user4")
+user5<-sum(created_by=="user5")
+user5
+data<-read.csv("Group0_issues.csv")
+assignee<-data$assignee
+assignee
+length(grep("user1", assignee))
+length(grep("user2", assignee))
+length(grep("user3", assignee))
+length(grep("user4", assignee))
+assignee<-data$assignee#
+user1<-length(grep("user1", assignee))#
+user2<-length(grep("user2", assignee))#
+user3<-length(grep("user3", assignee))#
+slices <- c(user1, user2, user3)#
+lbls <- c("user1", "user2", "user3")#
+pct <- round(slices/sum(slices)*100)#
+lbls <- paste(lbls, pct) # add percents to labels #
+lbls <- paste(lbls,"%",sep="") # ad % to labels #
+pie(slices,labels = lbls, col=rainbow(length(lbls)), main="Percentage of issues assigned per member")
+data<-read.csv("Group1_issues.csv")
+length(grep("user4", assignee))
+assignee<-data$assignee#
+user1<-length(grep("user1", assignee))#
+user2<-length(grep("user2", assignee))#
+user3<-length(grep("user3", assignee))#
+slices <- c(user1, user2, user3)#
+lbls <- c("user1", "user2", "user3")#
+pct <- round(slices/sum(slices)*100)#
+lbls <- paste(lbls, pct) # add percents to labels #
+lbls <- paste(lbls,"%",sep="") # ad % to labels #
+pie(slices,labels = lbls, col=rainbow(length(lbls)), main="Percentage of issues assigned per member")
+data<-read.csv("Group2_issues.csv")
+length(grep("user4", assignee))
+assignee<-data$assignee#
+user1<-length(grep("user1", assignee))#
+user2<-length(grep("user2", assignee))#
+user3<-length(grep("user3", assignee))#
+slices <- c(user1, user2, user3)#
+lbls <- c("user1", "user2", "user3")#
+pct <- round(slices/sum(slices)*100)#
+lbls <- paste(lbls, pct) # add percents to labels #
+lbls <- paste(lbls,"%",sep="") # ad % to labels #
+pie(slices,labels = lbls, col=rainbow(length(lbls)), main="Percentage of issues assigned per member")
+data<-read.csv("Group3_issues.csv")
+length(grep("user4", assignee))
+assignee<-data$assignee#
+user1<-length(grep("user1", assignee))#
+user2<-length(grep("user2", assignee))#
+user3<-length(grep("user3", assignee))
+user4<-length(grep("user4", assignee))
+slices <- c(user1, user2, user3, user4)
+lbls <- c("user1", "user2", "user3", "user4")
+pct <- round(slices/sum(slices)*100)#
+lbls <- paste(lbls, pct) # add percents to labels #
+lbls <- paste(lbls,"%",sep="") # ad % to labels #
+pie(slices,labels = lbls, col=rainbow(length(lbls)), main="Percentage of issues assigned per member")
+data<-read.csv("Group0_issues.csv")
+milestone<-data$milestone
+without_milestone<-sum(milestone=="None")
+without_milestone
+with_milestone<-length(milestone)-without_milestone
+with_milestone
+slices <- c(with_milestone, without_milestone)#
+lbls <- c("assigned milestone", "without milestone")#
+pct <- round(slices/sum(slices)*100)#
+lbls <- paste(lbls, pct) # add percents to labels #
+lbls <- paste(lbls,"%",sep="") # ad % to labels #
+pie(slices,labels = lbls, col=rainbow(length(lbls)), main="Issues assigned with milestone vs Issues without milestone")
+data<-read.csv("Group1_issues.csv")
+milestone<-data$milestone#
+without_milestone<-sum(milestone=="None")#
+with_milestone<-length(milestone)-without_milestone#
+slices <- c(with_milestone, without_milestone)#
+lbls <- c("assigned milestone", "without milestone")#
+pct <- round(slices/sum(slices)*100)#
+lbls <- paste(lbls, pct) # add percents to labels #
+lbls <- paste(lbls,"%",sep="") # ad % to labels #
+pie(slices,labels = lbls, col=rainbow(length(lbls)), main="Issues assigned with milestone vs Issues without milestone")
+data<-read.csv("Group2_issues.csv")
+milestone<-data$milestone#
+without_milestone<-sum(milestone=="None")#
+with_milestone<-length(milestone)-without_milestone#
+slices <- c(with_milestone, without_milestone)#
+lbls <- c("assigned milestone", "without milestone")#
+pct <- round(slices/sum(slices)*100)#
+lbls <- paste(lbls, pct) # add percents to labels #
+lbls <- paste(lbls,"%",sep="") # ad % to labels #
+pie(slices,labels = lbls, col=rainbow(length(lbls)), main="Issues assigned with milestone vs Issues without milestone")
+data<-read.csv("Group2_issues.csv")
+data<-read.csv("Group3_issues.csv")
+milestone<-data$milestone#
+without_milestone<-sum(milestone=="None")#
+with_milestone<-length(milestone)-without_milestone#
+slices <- c(with_milestone, without_milestone)#
+lbls <- c("assigned milestone", "without milestone")#
+pct <- round(slices/sum(slices)*100)#
+lbls <- paste(lbls, pct) # add percents to labels #
+lbls <- paste(lbls,"%",sep="") # ad % to labels #
+pie(slices,labels = lbls, col=rainbow(length(lbls)), main="Issues assigned with milestone vs Issues without milestone")
