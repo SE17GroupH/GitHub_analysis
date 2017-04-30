@@ -69,3 +69,17 @@ pct <- round(slices/sum(slices)*100)
 lbls <- paste(lbls, pct) # add percents to labels 
 lbls <- paste(lbls,"%",sep="") # ad % to labels 
 pie(slices,labels = lbls, col=rainbow(length(lbls)), main="Bug label vs non bug labels")
+
+#pie charts for issues creators
+data<-read.csv("Group0_issues.csv")
+created_by<-data$created_by
+user1<-sum(created_by=="user1")
+user2<-sum(created_by=="user2")
+user3<-sum(created_by=="user3")
+user4<-sum(created_by=="user4")
+slices <- c(user1, user2, user3, user4)
+lbls <- c("user1", "user2", "user3", "user4")
+pct <- round(slices/sum(slices)*100)
+lbls <- paste(lbls, pct) # add percents to labels 
+lbls <- paste(lbls,"%",sep="") # ad % to labels 
+pie(slices,labels = lbls, col=rainbow(length(lbls)), main="Percentage of issues created per member")
