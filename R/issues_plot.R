@@ -109,3 +109,34 @@ pct <- round(slices/sum(slices)*100)
 lbls <- paste(lbls, pct) # add percents to labels 
 lbls <- paste(lbls,"%",sep="") # ad % to labels 
 pie(slices,labels = lbls, col=rainbow(length(lbls)), main="Issues assigned with milestone vs Issues without milestone")
+
+
+#comments_duration_linear_model
+duration<-data$duration
+comments<-data$comments
+sorted_df<-df[order(duration),]
+subset1_df<-sorted_df[which(sorted_df$duration<=48 & sorted_df$duration>0),]
+subset2_df<-sorted_df[which(sorted_df$duration>48),]
+lm.comments1<-lm(subset1_df$comments ~ subset1_df$duration)
+lm.comments2<-lm(subset2_df$comments ~ subset2_df$duration)
+plot(subset1_df, main="Comments and duration under issues (duration less than 48 hours)", xlab="issue duration")
+abline(lm.comments1, las=1)
+
+plot(subset2_df, main="Comments and duration under issues (duration more than 48 hours)", xlab="issue duration")
+abline(lm.comments2, las=1)
+
+resi <- resid(lm.comments1)
+sum(resi < 0)
+sum(resi >= 0)
+
+
+resi <- resid(lm.comments2)
+sum(resi < 0)
+sum(resi >= 0)
+
+text(1, labels="below is"+below, pos=1, offset=0.5)
+
+
+
+
+
