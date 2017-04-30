@@ -43,3 +43,18 @@ remove_none<-setdiff(duration, remove)
 less24<-sum(remove_none<=24)
 more24<-sum(remove_none>24)
 
+
+# Comments
+comments<-data$comments
+comment0<-sum(comments == 0)
+comments5<-sum(comments>0 & comments<=5)
+comments10<-sum(comments>5 & comments<=10)
+comments15<-sum(comments>10 & comments<=15)
+comments20<-sum(comments>15 & comments<=20)
+comments20plus<-sum(comments>20)
+comments_table<-matrix(c(comment0, comments5, comments10, comments15, comments20, comments20plus), ncol=6, byrow=TRUE)
+colnames(comments_table)<-c("0", "1-5", "6-10", "11-15", "16-20", "20+")
+rownames(comments_table)<-c("counts")
+comments_table<-as.table(comments_table)
+mp<-barplot(comments_table, main="Comments count", xlab="Number of comments per issue")
+text(mp, c(comment0, comments5, comments10, comments15, comments20, comments20plus), labels = c(comment0, comments5, comments10, comments15, comments20, comments20plus), pos = 1, col="white")
