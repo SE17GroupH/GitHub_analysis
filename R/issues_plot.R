@@ -58,3 +58,14 @@ rownames(comments_table)<-c("counts")
 comments_table<-as.table(comments_table)
 mp<-barplot(comments_table, main="Comments count", xlab="Number of comments per issue")
 text(mp, c(comment0, comments5, comments10, comments15, comments20, comments20plus), labels = c(comment0, comments5, comments10, comments15, comments20, comments20plus), pos = 1, col="white")
+
+# pie charts for issues with bug label vs nonbug label
+buglabel<-data$bug
+bugtrue<-sum(buglabel=="True")
+bugfalse<-sum(buglabel=="False")
+slices <- c(bugtrue, bugfalse) 
+lbls <- c("bug label", "non bug labels")
+pct <- round(slices/sum(slices)*100)
+lbls <- paste(lbls, pct) # add percents to labels 
+lbls <- paste(lbls,"%",sep="") # ad % to labels 
+pie(slices,labels = lbls, col=rainbow(length(lbls)), main="Bug label vs non bug labels")
