@@ -83,3 +83,16 @@ pct <- round(slices/sum(slices)*100)
 lbls <- paste(lbls, pct) # add percents to labels 
 lbls <- paste(lbls,"%",sep="") # ad % to labels 
 pie(slices,labels = lbls, col=rainbow(length(lbls)), main="Percentage of issues created per member")
+
+
+#pie chart for assignee
+assignee<-data$assignee
+user1<-length(grep("user1", assignee))
+user2<-length(grep("user2", assignee))
+user3<-length(grep("user3", assignee))
+slices <- c(user1, user2, user3)
+lbls <- c("user1", "user2", "user3")
+pct <- round(slices/sum(slices)*100)
+lbls <- paste(lbls, pct) # add percents to labels 
+lbls <- paste(lbls,"%",sep="") # ad % to labels 
+pie(slices,labels = lbls, col=rainbow(length(lbls)), main="Percentage of issues assigned per member")
