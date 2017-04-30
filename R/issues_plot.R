@@ -96,3 +96,15 @@ pct <- round(slices/sum(slices)*100)
 lbls <- paste(lbls, pct) # add percents to labels 
 lbls <- paste(lbls,"%",sep="") # ad % to labels 
 pie(slices,labels = lbls, col=rainbow(length(lbls)), main="Percentage of issues assigned per member")
+
+
+#issues with milestone vs without
+milestone<-data$milestone
+without_milestone<-sum(milestone=="None")
+with_milestone<-length(milestone)-without_milestone
+slices <- c(with_milestone, without_milestone)
+lbls <- c("assigned milestone", "without milestone")
+pct <- round(slices/sum(slices)*100)
+lbls <- paste(lbls, pct) # add percents to labels 
+lbls <- paste(lbls,"%",sep="") # ad % to labels 
+pie(slices,labels = lbls, col=rainbow(length(lbls)), main="Issues assigned with milestone vs Issues without milestone")
