@@ -1,12 +1,14 @@
 #!/bin/bash
 # Team H
 echo "---------Github Heuristics Engine----------"
+echo "Needs git and git_stats (gem install git_stats)"
 echo "Enter a Github repo path username/reponame"
 read -p 'Username: ' username
 read -p 'Reponame: ' reponame
 git clone "https://github.com/$username/$reponame"
 cd $reponame
 ######################################################
+# Anonymize
 echo 
 echo "Anonymizing git repo using git filter-branch.."
 git log --all --format='%cE' | sort -u | grep -v "noreply@github.com" > /tmp/authors.txt
@@ -39,12 +41,6 @@ while IFS= read -r line; do
 	rm -rf .git/refs/original/
 done < "$file"
 ######################################################
-mkdir reports
+# Generate stats
 git_stats generate --silent
-mv git_stats reports/
-echo "Git_stats report generated at $(pwd)/reports/git_stats/index.html"
-gitstats . gitstats >& /dev/null
-mv gitstats reports/
-echo "Gitstats report generated at $(pwd)/reports/git_stats/index.html"
-gitinspector --grading=TRUE -F html > reports/gitinspector.html
-echo "GitInspector report generated at $(pwd)/reports/gitinspector.html"
+echo "Git_stats report generated at $(pwd)/git_stats/index.html"
