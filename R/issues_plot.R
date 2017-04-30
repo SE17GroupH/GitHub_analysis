@@ -114,6 +114,7 @@ pie(slices,labels = lbls, col=rainbow(length(lbls)), main="Issues assigned with 
 #comments_duration_linear_model
 duration<-data$duration
 comments<-data$comments
+df<-data.frame(duration, comments)
 sorted_df<-df[order(duration),]
 subset1_df<-sorted_df[which(sorted_df$duration<=48 & sorted_df$duration>0),]
 subset2_df<-sorted_df[which(sorted_df$duration>48),]
@@ -128,7 +129,6 @@ abline(lm.comments2, las=1)
 resi <- resid(lm.comments1)
 sum(resi < 0)
 sum(resi >= 0)
-
 
 resi <- resid(lm.comments2)
 sum(resi < 0)
