@@ -1,7 +1,0 @@
-id,state,pull_request,created_at,closed_at,duration,created_by,comments,assignees,milestone,labels
-1,closed,No,2017-04-15T15:23:01Z,2017-04-19T05:06:48Z,85,thegreyd,2,['thegreyd'],2017-04-22T07:00:00Z,1
-2,open,No,2017-04-15T15:23:03Z,None,None,KaustubhG,1,[],None,None
-3,open,No,2017-04-20T15:45:29Z,None,None,thegreyd,0,[],None,None
-4,open,No,2017-04-23T17:15:20Z,None,None,KaustubhG,0,['KaustubhG'],None,1
-5,open,No,2017-04-26T01:36:31Z,None,None,thegreyd,5,"['thegreyd', 'DevArenaCN', 'KaustubhG']",None,None
-6,open,No,2017-04-26T01:39:45Z,None,None,thegreyd,6,"['thegreyd', 'DevArenaCN', 'KaustubhG']",2017-04-22T07:00:00Z,2
