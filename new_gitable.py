@@ -7,7 +7,7 @@ users_global = {}
 
 def get_url_json(url):
 	"""get json data from a url"""
-	token = ""
+	token = "31ac0df1ade9e3b993823aa9f45c30231490ea75"
 	request = urllib.request.Request(url, headers={"Authorization" : "token "+token})
 	return json.loads(urllib.request.urlopen(request).read().decode())
 
@@ -66,8 +66,15 @@ def process_issues(issues, issues_json):
 
 		if issue["labels"]:
 			new_issue["labels"] = len(issue["labels"])
+			new_issue["bug"] = "False"
+			for label in issue["labels"]:
+				if label["name"] == "bug":
+					new_issue["bug"] = "True"
+					break
+			
 		else:
 			new_issue["labels"] = "None"
+			new_issue["bug"] = "False"
 
 		issues[issue['number']] = new_issue
 	
@@ -102,7 +109,7 @@ for index,reponame in enumerate(repos):
 	issues = get_issues(reponame)
 	# filename = "{}_issues.csv".format(reponame.replace("/","_"))
 	filename = "Group{}_issues.csv".format(index)
-	issue_keys = ["id", "state", "pull_request", "created_at", "closed_at", "duration", "created_by", "comments", "assignees", "milestone", "labels"]
+	issue_keys = ["id", "state", "pull_request", "created_at", "closed_at", "duration", "created_by", "comments", "assignees", "milestone", "labels", "bug"]
 	write_csv(issue_keys, issues, filename)
 	print(users_global)
 	users_global = {}
