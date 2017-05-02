@@ -60,184 +60,21 @@ sigmaSquare = sum((X-mean(X))*(X-mean(X)))/4#
 if(mean(X^2) == mean(X)^2+ sigmaSquare)#
 cat("Equation verified!")
 data<-read.csv("Group0_issues.csv")
-data<-read.csv("Group0_issues.csv")
-duration<-data$duration#
+duration<-data$duration
 comments<-data$comments
-duration
-sorted_df<-df[order(duration),]
-sorted_df<-df[order(duration),]
 df<-data.frame(duration, comments)
 sorted_df<-df[order(duration),]
-subset1_df<-sorted_df[which(sorted_df$duration<=48 & sorted_df$duration>0),]#
-subset2_df<-sorted_df[which(sorted_df$duration>48),]#
-lm.comments1<-lm(subset1_df$comments ~ subset1_df$duration)#
-lm.comments2<-lm(subset2_df$comments ~ subset2_df$duration)
-plot(subset2_df, main="Comments and duration under issues (duration more than 48 hours)", xlab="issue duration")#
-abline(lm.comments2, las=1)
-resi <- resid(lm.comments2)#
-sum(resi < 0)#
-sum(resi >= 0)
-data<-read.csv("Group1_issues.csv")
-duration<-data$duration#
-comments<-data$comments#
-df<-data.frame(duration, comments)#
-sorted_df<-df[order(duration),]#
-subset1_df<-sorted_df[which(sorted_df$duration<=48 & sorted_df$duration>0),]#
-subset2_df<-sorted_df[which(sorted_df$duration>48),]#
-lm.comments1<-lm(subset1_df$comments ~ subset1_df$duration)#
-lm.comments2<-lm(subset2_df$comments ~ subset2_df$duration)#
-plot(subset1_df, main="Comments and duration under issues (duration less than 48 hours)", xlab="issue duration")#
+subset1_df<-sorted_df[which(sorted_df$duration<=48 & sorted_df$duration>0),]
+lm.comments1<-lm(subset1_df$comments ~ subset1_df$duration)
+data2<-read.csv("Group1_issues.csv")
+duration2<-data2$duration
+comments2<-data2$comments
+df2<-data.frame(duration2, comments2)
+sorted_df2<-df2[order(duration),]
+subset1_df2<-sorted_df2[which(sorted_df2$duration<=48 & sorted_df2$duration>0),]
+plot(subset1_df2, main="Comments and duration under issues (duration less than 48 hours)", xlab="issue duration")
 abline(lm.comments1, las=1)
 resi <- resid(lm.comments1)#
 sum(resi < 0)#
 sum(resi >= 0)
-plot(subset2_df, main="Comments and duration under issues (duration more than 48 hours)", xlab="issue duration")#
-abline(lm.comments2, las=1)
-resi <- resid(lm.comments2)#
-sum(resi < 0)#
-sum(resi >= 0)
-data<-read.csv("teamH.csv")
-data
-data$commits
-data$loc
-slices<-data$commits
-lbls <- c("user1", "user2", "user3")
-pct <- round(slices/sum(slices)*100)#
-lbls <- paste(lbls, pct) # add percents to labels #
-lbls <- paste(lbls,"%",sep="") # ad % to labels #
-pie(slices,labels = lbls, col=rainbow(length(lbls)), main="Percentage of commits per member")
-slices<-data$loc
-pct <- round(slices/sum(slices)*100)#
-lbls <- paste(lbls, pct) # add percents to labels #
-lbls <- paste(lbls,"%",sep="") # ad % to labels #
-pie(slices,labels = lbls, col=rainbow(length(lbls)), main="Percentage of issues assigned per member")
-pct <- round(slices/sum(slices)*100)#
-lbls <- paste(lbls, pct) # add percents to labels #
-lbls <- paste(lbls,"%",sep="") # ad % to labels #
-pie(slices,labels = lbls, col=rainbow(length(lbls)), main="Percentage of lines of codes assigned per member")
-lbls <- c("assigned milestone", "without milestone")
-pct <- round(slices/sum(slices)*100)#
-lbls <- paste(lbls, pct) # add percents to labels #
-lbls <- paste(lbls,"%",sep="") # ad % to labels #
-pie(slices,labels = lbls, col=rainbow(length(lbls)), main="Percentage of lines of codes assigned per member")
-lbls <- c("user1", "user2", "user3")
-pct <- round(slices/sum(slices)*100)#
-lbls <- paste(lbls, pct) # add percents to labels #
-lbls <- paste(lbls,"%",sep="") # ad % to labels #
-pie(slices,labels = lbls, col=rainbow(length(lbls)), main="Percentage of lines of codes assigned per member")
-data<-read.csv("teamS.csv")
-slices<-data$commits#
-lbls <- c("user1", "user2", "user3")#
-pct <- round(slices/sum(slices)*100)#
-lbls <- paste(lbls, pct) # add percents to labels #
-lbls <- paste(lbls,"%",sep="") # ad % to labels #
-pie(slices,labels = lbls, col=rainbow(length(lbls)), main="Percentage of commits per member")
-slices<-data$commits#
-lbls <- c("user1", "user2", "user3", "user4")#
-pct <- round(slices/sum(slices)*100)#
-lbls <- paste(lbls, pct) # add percents to labels #
-lbls <- paste(lbls,"%",sep="") # ad % to labels #
-pie(slices,labels = lbls, col=rainbow(length(lbls)), main="Percentage of commits per member")
-slices<-data$loc#
-lbls <- c("user1", "user2", "user3", "user4")#
-pct <- round(slices/sum(slices)*100)#
-lbls <- paste(lbls, pct) # add percents to labels #
-lbls <- paste(lbls,"%",sep="") # ad % to labels #
-pie(slices,labels = lbls, col=rainbow(length(lbls)), main="Percentage of lines of codes assigned per member")
-slices<-data$loc#
-lbls <- c("user1", "user2", "user3", "user4")#
-pct <- round(slices/sum(slices)*100)#
-lbls <- paste(lbls, pct) # add percents to labels #
-lbls <- paste(lbls,"%",sep="") # ad % to labels #
-pie(slices,labels = lbls, col=rainbow(length(lbls)), main="Percentage of lines of codes per member")
-data<-read.csv("teamH.csv")
-slices<-data$loc#
-lbls <- c("user1", "user2", "user3")#
-pct <- round(slices/sum(slices)*100)#
-lbls <- paste(lbls, pct) # add percents to labels #
-lbls <- paste(lbls,"%",sep="") # ad % to labels #
-pie(slices,labels = lbls, col=rainbow(length(lbls)), main="Percentage of lines of codes per member")
-data<-read.csv("teamH.csv")
-slices<-data$commits#
-lbls <- c("user1", "user2", "user3", "user4")#
-pct <- round(slices/sum(slices)*100)#
-lbls <- paste(lbls, pct) # add percents to labels #
-lbls <- paste(lbls,"%",sep="") # ad % to labels #
-pie(slices,labels = lbls, col=rainbow(length(lbls)), main="Percentage of commits per member")
-slices<-data$loc#
-lbls <- c("user1", "user2", "user3")#
-pct <- round(slices/sum(slices)*100)#
-lbls <- paste(lbls, pct) # add percents to labels #
-lbls <- paste(lbls,"%",sep="") # ad % to labels #
-pie(slices,labels = lbls, col=rainbow(length(lbls)), main="Percentage of lines of codes per member")
-slices<-data$loc#
-lbls <- c("user1", "user2", "user3", "user4")#
-pct <- round(slices/sum(slices)*100)#
-lbls <- paste(lbls, pct) # add percents to labels #
-lbls <- paste(lbls,"%",sep="") # ad % to labels #
-pie(slices,labels = lbls, col=rainbow(length(lbls)), main="Percentage of lines of codes per member")
-data
-data<-read.csv("teamD.csv")
-data
-slices<-data$commits#
-lbls <- c("user1", "user2", "user3", "user4")#
-pct <- round(slices/sum(slices)*100)#
-lbls <- paste(lbls, pct) # add percents to labels #
-lbls <- paste(lbls,"%",sep="") # ad % to labels #
-pie(slices,labels = lbls, col=rainbow(length(lbls)), main="Percentage of commits per member")
-slices<-data$loc#
-lbls <- c("user1", "user2", "user3", "user4")#
-pct <- round(slices/sum(slices)*100)#
-lbls <- paste(lbls, pct) # add percents to labels #
-lbls <- paste(lbls,"%",sep="") # ad % to labels #
-pie(slices,labels = lbls, col=rainbow(length(lbls)), main="Percentage of lines of codes per member")
-data<-read.csv("Group2_issues.csv")
-created_at<-data$created_at
-open_dates<-strftime(created_at, format="%W")
-closed_dates<-strftime(closed_at, format="%W")
-data<-read.csv("Group0_issues.csv")
-created_at<-data$created_at
-open_dates<-strftime(created_at, format="%W")
-open_counts<-table(open_dates)
-closed_dates<-strftime(closed_at, format="%W")
-closed_at<-data$closed_at
-closed_dates<-strftime(closed_at, format="%W")
-closed_counts<-table(closed_dates)
-barplot(c(open_counts,closed_counts), main="Issues closed", xlab="week")
-barplot(open_counts-closed_counts, main="Issues closed", xlab="week")
-remain_open<-open_counts-closed_counts
-library(dplyr)
-setdiff(open_counts, closed_counts)
-open_counts
-closed_counts
-data<-read.csv("Group2_issues.csv")
-created_at<-data$created_at#
-open_dates<-strftime(created_at, format="%W")#
-open_counts<-table(open_dates)
-closed_at<-data$closed_at#
-closed_dates<-strftime(closed_at, format="%W")#
-closed_counts<-table(closed_dates)
-open_counts
-closed_counts
-data<-read.csv("Group3_issues.csv")
-created_at<-data$created_at#
-open_dates<-strftime(created_at, format="%W")#
-open_counts<-table(open_dates)
-closed_at<-data$closed_at#
-closed_dates<-strftime(closed_at, format="%W")#
-closed_counts<-table(closed_dates)
-closed_at<-data$closed_at#
-closed_dates<-strftime(closed_at, format="%W")#
-closed_counts<-table(closed_dates)
-closed_at
-remove<-c("None")
-remove_none<-setdiff(closed_at, remove)
-closed_dates<-strftime(removed_none, format="%W")
-removed_none
-remove_none
-closed_dates<-strftime(remove_none, format="%W")
-closed_counts<-table(closed_dates)
-closed_counts
-open_counts
-sum(closed_counts)
-sum(open_counts)
+subset1_df2
